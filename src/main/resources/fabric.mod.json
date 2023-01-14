@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "morefood",
+  "version": "${version}",
+
+  "name": "More Food",
+  "description": "This mod adds more foods to Minecraft, now updated to 1.17!",
+  "authors": [
+    "LDM"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC BY-ND 4.0",
+  "icon": "assets/morefood/mod.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.ldm.morefood.MoreFood"
+    ],
+    "client": [
+      "net.ldm.morefood.ClientInit"
+    ]
+  },
+  "mixins": [
+    "morefood.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.17.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  },
+  "accessWidener" : "morefood.accesswidener"
+}

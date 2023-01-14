@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "morefood:block/potatoes_stage3"
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ggg",
+        "gMg",
+        "ggg"
+    ],
+    "key": {
+        "g": {
+            "item": "minecraft:gold_ingot"
+        },
+        "M": {
+            "item": "morefood:muffin"
+        }
+    },
+    "result": {
+        "item": "morefood:enchanted_golden_muffin",
+        "count": 1
+    }
+}

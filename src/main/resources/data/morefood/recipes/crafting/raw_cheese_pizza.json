@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "CTC",
+        "T#T",
+        "CTC"
+    ],
+    "key": {
+        "C": {
+            "item": "morefood:cheese"
+        },
+        "T": {
+            "item": "morefood:tomato"
+        },
+        "#": {
+            "item": "morefood:pizza_dough"
+        }
+    },
+    "result": {
+        "item": "morefood:raw_cheese_pizza",
+        "count": 1
+    }
+}

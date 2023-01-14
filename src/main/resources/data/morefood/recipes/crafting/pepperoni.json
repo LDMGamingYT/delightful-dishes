@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "morefood:salt"
+        },
+        {
+            "item": "minecraft:porkchop"
+        }
+    ],
+    "result": {
+        "item": "morefood:pepperoni",
+        "count": 4
+    }
+}

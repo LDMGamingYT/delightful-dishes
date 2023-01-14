@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "morefood:cat_steak"
+    },
+    "result": "morefood:cooked_cat_steak",
+    "experience": 0.4,
+    "cookingtime": 100,
+    "group": "cat"
+}

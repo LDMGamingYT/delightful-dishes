@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "morefood:horse_meat"
+    },
+    "result": "morefood:cooked_horse_meat",
+    "experience": 0.4,
+    "cookingtime": 200,
+    "group": "horse_meat"
+}

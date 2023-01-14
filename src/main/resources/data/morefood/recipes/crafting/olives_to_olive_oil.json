@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "morefood:olives"
+        },
+        {
+            "item": "morefood:olives"
+        },
+        {
+            "item": "minecraft:water_bucket"
+        },
+        {
+            "item": "morefood:olives"
+        },
+        {
+            "item": "morefood:olives"
+        }
+    ],
+    "result": {
+        "item": "morefood:olive_oil",
+        "count": 3
+    }
+}

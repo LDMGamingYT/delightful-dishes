@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "morefood:raw_cheese_pizza"
+        },
+        {
+            "item": "morefood:pepperoni"
+        },
+        {
+            "item": "morefood:pepperoni"
+        },
+        {
+            "item": "morefood:pepperoni"
+        },
+        {
+            "item": "morefood:pepperoni"
+        }
+    ],
+    "result": {
+        "item": "morefood:raw_pepperoni_pizza",
+        "count": 1
+    }
+}

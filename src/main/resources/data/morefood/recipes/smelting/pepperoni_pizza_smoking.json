@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "morefood:raw_pepperoni_pizza"
+    },
+    "result": "morefood:pepperoni_pizza",
+    "experience": 0.4,
+    "cookingtime": 100,
+    "group": "pepperoni_pizza"
+}

@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:campfire_cooking",
+    "ingredient": {
+        "item": "morefood:garlic_bread"
+    },
+    "result": "morefood:baked_garlic_bread",
+    "experience": 0.35,
+    "cookingtime": 600
+}

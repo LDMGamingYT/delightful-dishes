@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:wheat"
+        }
+    },
+    "result": {
+        "item": "morefood:pizza_dough",
+        "count": 1,
+        "group": "pizza"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "morefood:bacon"
+    },
+    "result": "morefood:cooked_bacon",
+    "experience": 0.4,
+    "cookingtime": 100,
+    "group": "bacon"
+}

@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "morefood:raw_cheese_pizza"
+    },
+    "result": "morefood:cheese_pizza",
+    "experience": 0.4,
+    "cookingtime": 200,
+    "group": "cheese_pizza"
+}

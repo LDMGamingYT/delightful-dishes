@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#M#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_nugget"
+        },
+        "M": {
+            "item": "morefood:muffin"
+        }
+    },
+    "result": {
+        "item": "morefood:golden_muffin",
+        "count": 1
+    }
+}
