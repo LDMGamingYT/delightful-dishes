@@ -1,9 +1,15 @@
-# Fabric Example Mod
+## **⚠️ THIS MOD HAS BEEN ABANDONED, THERE WILL BE NO FUTURE UPDATES** **⚠️**
 
-## Setup
+### 
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+### **This is a FABRIC mod. It will NOT work with forge**
 
-## License
+### What do you get when you mix Food and Vanilla Crafting?
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+#### This mod! It stays true to vanilla crafting while adding many new food items to the game!
+
+##### Enjoy plenty of crops, foods, ores, to yourself, or share it with friends on multiplayer!
+
+![All food items in this mod.](https://i.imgur.com/t8bqzi8.png)
+
+##### **THIS MOD IS IN ALPHA. SOME BUGS MAY BE PRESENT.**
