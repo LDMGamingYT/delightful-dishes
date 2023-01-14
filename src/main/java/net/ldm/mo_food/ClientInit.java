@@ -1,11 +1,10 @@
-package net.ldm.morefood;
+package net.ldm.mo_food;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.render.RenderLayer;
 
-import static net.ldm.morefood.MoreFood.*;
+import static net.ldm.mo_food.MoFood.*;
 
 public class ClientInit implements ClientModInitializer {
     @Override
@@ -14,6 +13,6 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(TOMATOES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(LETTUCE_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GARLIC_CROP, RenderLayer.getCutout());
-        //ScreenRegistry.register(MoreFood.COOKTOP_SCREEN_HANDLER, CooktopScreen::new);
+        //ScreenRegistry.register(MoFood.COOKTOP_SCREEN_HANDLER, CooktopScreen::new);
     }
 }

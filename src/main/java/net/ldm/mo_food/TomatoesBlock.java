@@ -1,14 +1,11 @@
-package net.ldm.morefood;
+package net.ldm.mo_food;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -41,7 +38,7 @@ public class TomatoesBlock extends PlantBlock implements Fertilizable {
 
         @Environment(EnvType.CLIENT)
         public ItemStack getPickStack( BlockView world, BlockPos pos, BlockState state) {
-            return new ItemStack(MoreFood.TOMATOES);
+            return new ItemStack(MoFood.TOMATOES);
         }
 
         public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
@@ -85,7 +82,7 @@ public class TomatoesBlock extends PlantBlock implements Fertilizable {
                 return ActionResult.PASS;
             } else if (i > 1) {
                 int j = 1 + world.random.nextInt(2);
-                dropStack(world, pos, new ItemStack(MoreFood.TOMATOES, j + (bl ? 1 : 0)));
+                dropStack(world, pos, new ItemStack(MoFood.TOMATOES, j + (bl ? 1 : 0)));
                 world.playSound((PlayerEntity)null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
                 world.setBlockState(pos, (BlockState)state.with(AGE, 1), 2);
                 return ActionResult.success(world.isClient);

@@ -1,4 +1,4 @@
-package net.ldm.morefood;
+package net.ldm.mo_food;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -25,8 +25,8 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
-public class MoreFood implements ModInitializer {
-    public static final String MOD_ID = "morefood";
+public class MoFood implements ModInitializer {
+    public static final String MOD_ID = "mo_food";
 
     public static final Item OMELET = new OmeletFood(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(6).saturationModifier(6f).build()));
     public static final Item FLOUR = new FlourItem(new Item.Settings().group(ItemGroup.MISC));
@@ -83,11 +83,11 @@ public class MoreFood implements ModInitializer {
     public static final Item BREADSTICKS = new Item((new Item.Settings()).group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.5f).build()));
     public static final Item GARLIC_BREADSTICKS = new Item((new Item.Settings()).group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).build()));
 
-    public static final SwordItem STONE_KNIFE = new SwordItem(ToolMaterials.STONE, 1, -2.0f, (new Item.Settings()).group(ItemGroup.TOOLS).recipeRemainder(MoreFood.STONE_KNIFE));
-    public static final SwordItem IRON_KNIFE = new SwordItem(ToolMaterials.IRON, 1, -2.0f, (new Item.Settings()).group(ItemGroup.TOOLS).recipeRemainder(MoreFood.IRON_KNIFE));
-    public static final SwordItem GOLDEN_KNIFE = new SwordItem(ToolMaterials.GOLD, 1, -2.0f, (new Item.Settings()).group(ItemGroup.TOOLS).recipeRemainder(MoreFood.GOLDEN_KNIFE));
-    public static final SwordItem DIAMOND_KNIFE = new SwordItem(ToolMaterials.DIAMOND, 1, -2.0f, (new Item.Settings()).group(ItemGroup.TOOLS).recipeRemainder(MoreFood.DIAMOND_KNIFE));
-    public static final SwordItem NETHERITE_KNIFE = new SwordItem(ToolMaterials.NETHERITE, 1, -2.0f, (new Item.Settings()).group(ItemGroup.TOOLS).recipeRemainder(MoreFood.NETHERITE_KNIFE));
+    public static final SwordItem STONE_KNIFE = new SwordItem(ToolMaterials.STONE, 1, -2.0f, (new Item.Settings()).group(ItemGroup.TOOLS).recipeRemainder(MoFood.STONE_KNIFE));
+    public static final SwordItem IRON_KNIFE = new SwordItem(ToolMaterials.IRON, 1, -2.0f, (new Item.Settings()).group(ItemGroup.TOOLS).recipeRemainder(MoFood.IRON_KNIFE));
+    public static final SwordItem GOLDEN_KNIFE = new SwordItem(ToolMaterials.GOLD, 1, -2.0f, (new Item.Settings()).group(ItemGroup.TOOLS).recipeRemainder(MoFood.GOLDEN_KNIFE));
+    public static final SwordItem DIAMOND_KNIFE = new SwordItem(ToolMaterials.DIAMOND, 1, -2.0f, (new Item.Settings()).group(ItemGroup.TOOLS).recipeRemainder(MoFood.DIAMOND_KNIFE));
+    public static final SwordItem NETHERITE_KNIFE = new SwordItem(ToolMaterials.NETHERITE, 1, -2.0f, (new Item.Settings()).group(ItemGroup.TOOLS).recipeRemainder(MoFood.NETHERITE_KNIFE));
 
     /*public static final Block COOKTOP_BLOCK;
     public static final BlockEntityType COOKTOP_BLOCK_ENTITY;
@@ -98,7 +98,7 @@ public class MoreFood implements ModInitializer {
     private static ConfiguredFeature<?, ?> SALT_ORE_OVERWORLD = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-                    MoreFood.SALT_ORE.getDefaultState(),
+                    MoFood.SALT_ORE.getDefaultState(),
                     4)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution

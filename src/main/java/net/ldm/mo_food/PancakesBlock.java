@@ -1,4 +1,4 @@
-package net.ldm.morefood;
+package net.ldm.mo_food;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,23 +18,22 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class PepperoniPizza extends Block {
+public class PancakesBlock extends Block {
     public static final IntProperty BITES;
+    protected static final VoxelShape[] BITES_TO_SHAPE;
 
-    protected PepperoniPizza(Settings settings) {
+    protected PancakesBlock(Settings settings) {
         super(settings);
         this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(BITES, 0));
     }
 
-    @Override
-    public VoxelShape getOutlineShape( BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        return VoxelShapes.cuboid(0.0625f, 0f, 0.0625f, 0.9375f, 0.0625f, 0.9375f);
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return BITES_TO_SHAPE[(Integer)state.get(BITES)];
     }
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
@@ -57,9 +56,9 @@ public class PepperoniPizza extends Block {
             return ActionResult.PASS;
         } else {
             player.incrementStat(Stats.EAT_CAKE_SLICE);
-            player.getHungerManager().add(4, 0.1F);
+            player.getHungerManager().add(2, 0.1F);
             int i = (Integer)state.get(BITES);
-            if (i < 3) {
+            if (i < 6) {
                 world.setBlockState(pos, (BlockState)state.with(BITES, i + 1), 3);
             } else {
                 world.removeBlock(pos, false);
@@ -94,5 +93,7 @@ public class PepperoniPizza extends Block {
     }
 
     static {
-        BITES = Properties.BITES; }
+        BITES = Properties.BITES;
+        BITES_TO_SHAPE = new VoxelShape[]{Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.createCuboidShape(3.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.createCuboidShape(5.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.createCuboidShape(7.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.createCuboidShape(9.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.createCuboidShape(11.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.createCuboidShape(13.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D)};
+    }
 }

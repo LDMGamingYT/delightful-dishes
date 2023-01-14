@@ -1,16 +1,16 @@
-package net.ldm.morefood;
+package net.ldm.mo_food;
 
 import net.minecraft.block.PotatoesBlock;
 import net.minecraft.item.ItemConvertible;
 
-public class LettuceBlock extends PotatoesBlock {
+public class SweetPotatoesBlock extends PotatoesBlock {
 
-    public LettuceBlock( Settings settings ) {
+    public SweetPotatoesBlock( Settings settings ) {
         super(settings);
     }
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return MoreFood.LETTUCE;
+        return MoFood.SWEET_POTATO;
     }
 }

@@ -1,4 +1,4 @@
-package net.ldm.morefood;
+package net.ldm.mo_food;
 
 import net.minecraft.item.Item;
 
