@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "morefood:item/netherite_knife"
+    "layer0": "mo_food:item/netherite_knife"
   }
 }

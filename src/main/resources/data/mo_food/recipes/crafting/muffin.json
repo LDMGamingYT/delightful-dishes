@@ -7,7 +7,7 @@
     ],
     "key": {
         "#": {
-            "item": "morefood:flour"
+            "item": "mo_food:flour"
         },
         "S": {
             "item": "minecraft:sugar"
@@ -23,7 +23,7 @@
         }
     },
     "result": {
-        "item": "morefood:muffin",
+        "item": "mo_food:muffin",
         "count": 6
     },
     "group": "muffin"

@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "morefood:item/iron_knife"
+    "layer0": "mo_food:item/iron_knife"
   }
 }

@@ -1,9 +1,9 @@
 {
     "type": "minecraft:campfire_cooking",
     "ingredient": {
-        "item": "morefood:sweet_potato"
+        "item": "mo_food:sweet_potato"
     },
-    "result": "morefood:baked_sweet_potato",
+    "result": "mo_food:baked_sweet_potato",
     "experience": 0.4,
     "cookingtime": 600,
     "group": "sweet_potato"

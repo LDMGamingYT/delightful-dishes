@@ -1,8 +1,8 @@
 {
 	"textures": {
-		"particle": "morefood:item/cheese_pizza",
-		"pizza": "morefood:item/cheese_pizza",
-		"bottom": "morefood:item/pizza_bread"
+		"particle": "mo_food:item/cheese_pizza",
+		"pizza": "mo_food:item/cheese_pizza",
+		"bottom": "mo_food:item/pizza_bread"
 	},
 	"elements": [
 		{

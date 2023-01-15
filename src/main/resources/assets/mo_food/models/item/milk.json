@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "morefood:item/milk"
+    "layer0": "mo_food:item/milk"
   }
 }

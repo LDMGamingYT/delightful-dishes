@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "morefood:lettuce"
+          "name": "mo_food:lettuce"
         }
       ]
     },
@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "morefood:lettuce",
+          "name": "mo_food:lettuce",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -32,7 +32,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "morefood:lettuce",
+          "block": "mo_food:lettuce",
           "properties": {
             "age": "7"
           }
@@ -45,7 +45,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "morefood:lettuce",
+          "block": "mo_food:lettuce",
           "properties": {
             "age": "7"
           }

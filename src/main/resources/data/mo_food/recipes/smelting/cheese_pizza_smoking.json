@@ -1,9 +1,9 @@
 {
     "type": "minecraft:smoking",
     "ingredient": {
-        "item": "morefood:raw_cheese_pizza"
+        "item": "mo_food:raw_cheese_pizza"
     },
-    "result": "morefood:cheese_pizza",
+    "result": "mo_food:cheese_pizza",
     "experience": 0.4,
     "cookingtime": 100,
     "group": "cheese_pizza"

@@ -5,11 +5,11 @@
             "item": "minecraft:beef"
         },
         {
-            "item": "morefood:salt"
+            "item": "mo_food:salt"
         }
     ],
     "result": {
-        "item": "morefood:beef_patty",
+        "item": "mo_food:beef_patty",
         "count": 1
     }
 }

@@ -1,9 +1,9 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-        "item": "morefood:pizza_dough"
+        "item": "mo_food:pizza_dough"
     },
-    "result": "morefood:pizza_bread",
+    "result": "mo_food:pizza_bread",
     "experience": 0.4,
     "cookingtime": 200,
     "group": "pizza"

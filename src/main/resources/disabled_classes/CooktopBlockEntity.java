@@ -9,7 +9,7 @@ import net.minecraft.util.math.BlockPos;
 
 public class CooktopBlockEntity extends AbstractFurnaceBlockEntity {
     public CooktopBlockEntity( BlockPos pos, BlockState state) {
-        super(MoreFood.COOKTOP_BLOCK_ENTITY, pos, state, MoreFood.COOKTOP_RECIPE);
+        super(mo_food.COOKTOP_BLOCK_ENTITY, pos, state, mo_food.COOKTOP_RECIPE);
     }
 
     @Override

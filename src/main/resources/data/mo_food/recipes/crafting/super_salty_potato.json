@@ -2,14 +2,14 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "morefood:salt_block"
+            "item": "mo_food:salt_block"
         },
         {
             "item": "minecraft:baked_potato"
         }
     ],
     "result": {
-        "item": "morefood:super_salty_potato",
+        "item": "mo_food:super_salty_potato",
         "count": 1
     }
 }

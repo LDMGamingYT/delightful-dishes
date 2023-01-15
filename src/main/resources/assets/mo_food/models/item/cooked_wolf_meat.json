@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "morefood:item/cooked_wolf_meat"
+    "layer0": "mo_food:item/cooked_wolf_meat"
   }
 }

@@ -1,9 +1,9 @@
 {
     "type": "minecraft:smoking",
     "ingredient": {
-        "item": "morefood:wolf_meat"
+        "item": "mo_food:wolf_meat"
     },
-    "result": "morefood:cooked_wolf_meat",
+    "result": "mo_food:cooked_wolf_meat",
     "experience": 0.4,
     "cookingtime": 100,
     "group": "wolf_meat"

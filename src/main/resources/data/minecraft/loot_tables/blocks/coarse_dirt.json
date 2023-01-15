@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "morefood:salt"
+          "name": "mo_food:salt"
         },
         {
           "type": "minecraft:item",

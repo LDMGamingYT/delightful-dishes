@@ -1,9 +1,9 @@
 {
     "type": "minecraft:campfire_cooking",
     "ingredient": {
-        "item": "morefood:beef_patty"
+        "item": "mo_food:beef_patty"
     },
-    "result": "morefood:cooked_beef_patty",
+    "result": "mo_food:cooked_beef_patty",
     "experience": 0.35,
     "cookingtime": 600
 }

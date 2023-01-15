@@ -7,7 +7,7 @@
     ],
     "key": {
         "#": {
-            "item": "morefood:flour"
+            "item": "mo_food:flour"
         },
         "M": {
             "item": "minecraft:milk_bucket"
@@ -20,7 +20,7 @@
         }
     },
     "result": {
-        "item": "morefood:pancakes",
+        "item": "mo_food:pancakes",
         "count": 1
     },
     "group": "pancakes"

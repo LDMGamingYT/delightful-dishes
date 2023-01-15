@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "morefood:item/super_salty_potato"
+    "layer0": "mo_food:item/super_salty_potato"
   }
 }

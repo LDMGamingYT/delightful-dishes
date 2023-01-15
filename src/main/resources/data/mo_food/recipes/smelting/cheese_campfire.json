@@ -3,7 +3,7 @@
     "ingredient": {
         "item": "minecraft:milk_bucket"
     },
-    "result": "morefood:cheese",
+    "result": "mo_food:cheese",
     "experience": 0.35,
     "cookingtime": 600
 }

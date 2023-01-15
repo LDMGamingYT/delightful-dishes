@@ -5,11 +5,11 @@
             "item": "minecraft:milk_bucket"
         },
         {
-            "item": "morefood:lemon_juice"
+            "item": "mo_food:lemon_juice"
         }
     ],
     "result": {
-        "item": "morefood:milk",
+        "item": "mo_food:milk",
         "count": 3
     }
 }

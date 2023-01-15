@@ -3,7 +3,7 @@
     "ingredient": {
         "item": "minecraft:rotten_flesh"
     },
-    "result": "morefood:detoxified_flesh",
+    "result": "mo_food:detoxified_flesh",
     "experience": 0.35,
     "cookingtime": 100
 }

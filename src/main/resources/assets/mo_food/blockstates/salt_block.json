@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "morefood:block/salt_block"
+      "model": "mo_food:block/salt_block"
     }
   }
 }

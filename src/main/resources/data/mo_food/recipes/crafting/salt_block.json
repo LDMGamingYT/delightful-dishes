@@ -7,11 +7,11 @@
     ],
     "key": {
         "#": {
-            "item": "morefood:salt"
+            "item": "mo_food:salt"
         }
     },
     "result": {
-        "item": "morefood:salt_block",
+        "item": "mo_food:salt_block",
         "count": 1
     }
 }

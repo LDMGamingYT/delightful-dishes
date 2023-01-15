@@ -3,7 +3,7 @@
     "ingredient": {
         "item": "minecraft:egg"
     },
-    "result": "morefood:omelet",
+    "result": "mo_food:omelet",
     "experience": 0.4,
     "cookingtime": 600,
     "group": "omelet"

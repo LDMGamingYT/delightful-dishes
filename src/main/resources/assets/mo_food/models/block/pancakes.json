@@ -1,9 +1,9 @@
 {
     "textures": {
-        "particle": "morefood:block/pancakes_side",
-        "bottom": "morefood:block/pancakes_bottom",
-        "top": "morefood:block/pancakes_top",
-        "side": "morefood:block/pancakes_side"
+        "particle": "mo_food:block/pancakes_side",
+        "bottom": "mo_food:block/pancakes_bottom",
+        "top": "mo_food:block/pancakes_top",
+        "side": "mo_food:block/pancakes_side"
     },
     "elements": [
         {   "from": [ 1, 0, 1 ],

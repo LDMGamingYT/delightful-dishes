@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "morefood:item/lettuce"
+    "layer0": "mo_food:item/lettuce"
   }
 }

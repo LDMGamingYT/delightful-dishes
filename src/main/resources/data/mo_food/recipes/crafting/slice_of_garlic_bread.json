@@ -2,14 +2,14 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "tag": "morefood:knives"
+            "tag": "mo_food:knives"
         },
         {
-            "item": "morefood:baked_garlic_bread"
+            "item": "mo_food:baked_garlic_bread"
         }
     ],
     "result": {
-        "item": "morefood:garlic_bread_slice",
+        "item": "mo_food:garlic_bread_slice",
         "count": 3
     }
 }

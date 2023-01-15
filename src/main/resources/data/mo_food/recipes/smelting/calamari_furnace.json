@@ -1,9 +1,9 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-        "item": "morefood:calamari"
+        "item": "mo_food:calamari"
     },
-    "result": "morefood:cooked_calamari",
+    "result": "mo_food:cooked_calamari",
     "experience": 0.4,
     "cookingtime": 200,
     "group": "calamari"

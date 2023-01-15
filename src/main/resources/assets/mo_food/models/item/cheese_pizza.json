@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "morefood:item/cheese_pizza"
+    "layer0": "mo_food:item/cheese_pizza"
   }
 }

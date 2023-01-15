@@ -10,11 +10,11 @@
             "item": "minecraft:gold_ingot"
         },
         "M": {
-            "item": "morefood:muffin"
+            "item": "mo_food:muffin"
         }
     },
     "result": {
-        "item": "morefood:enchanted_golden_muffin",
+        "item": "mo_food:enchanted_golden_muffin",
         "count": 1
     }
 }

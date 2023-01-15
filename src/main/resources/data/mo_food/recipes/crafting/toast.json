@@ -2,14 +2,14 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "tag": "morefood:knives"
+            "tag": "mo_food:knives"
         },
         {
             "item": "minecraft:bread"
         }
     ],
     "result": {
-        "item": "morefood:toast",
+        "item": "mo_food:toast",
         "count": 3
     }
 }

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "morefood:banana",
+          "name": "mo_food:banana",
           "conditions": [
             {
               "condition": "minecraft:random_chance",

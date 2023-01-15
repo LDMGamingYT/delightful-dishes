@@ -11,7 +11,7 @@
         }
     },
     "result": {
-        "item": "morefood:pizza_dough",
+        "item": "mo_food:pizza_dough",
         "count": 1,
         "group": "pizza"
     }

@@ -1,9 +1,9 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-        "item": "morefood:cat_steak"
+        "item": "mo_food:cat_steak"
     },
-    "result": "morefood:cooked_cat_steak",
+    "result": "mo_food:cooked_cat_steak",
     "experience": 0.4,
     "cookingtime": 200,
     "group": "cat"

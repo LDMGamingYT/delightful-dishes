@@ -2,20 +2,20 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "morefood:olive_oil"
+            "item": "mo_food:olive_oil"
         },
         {
             "item": "minecraft:baked_potato"
         },
         {
-            "item": "morefood:salt"
+            "item": "mo_food:salt"
         },
         {
             "item": "minecraft:paper"
         }
     ],
     "result": {
-        "item": "morefood:french_fries",
+        "item": "mo_food:french_fries",
         "count": 1
     }
 }

@@ -1,9 +1,9 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-        "item": "morefood:milk"
+        "item": "mo_food:milk"
     },
-    "result": "morefood:butter",
+    "result": "mo_food:butter",
     "experience": 0.35,
     "cookingtime": 200,
     "group": "butter"

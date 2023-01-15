@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "morefood:garlic"
+          "name": "mo_food:garlic"
         }
       ]
     },
@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "morefood:garlic",
+          "name": "mo_food:garlic",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -32,7 +32,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "morefood:garlic",
+          "block": "mo_food:garlic",
           "properties": {
             "age": "7"
           }
@@ -45,7 +45,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "morefood:garlic",
+          "block": "mo_food:garlic",
           "properties": {
             "age": "7"
           }

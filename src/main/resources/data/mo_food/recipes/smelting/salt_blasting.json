@@ -1,9 +1,9 @@
 {
     "type": "minecraft:blasting",
     "ingredient": {
-        "item": "morefood:salt_ore"
+        "item": "mo_food:salt_ore"
     },
-    "result": "morefood:salt",
+    "result": "mo_food:salt",
     "experience": 0.1,
     "cookingtime": 100,
     "group": "salt"

@@ -1,9 +1,9 @@
 {
     "type": "minecraft:smoking",
     "ingredient": {
-        "item": "morefood:chicken_nuggets"
+        "item": "mo_food:chicken_nuggets"
     },
-    "result": "morefood:cooked_chicken_nuggets",
+    "result": "mo_food:cooked_chicken_nuggets",
     "experience": 0.4,
     "cookingtime": 100,
     "group": "chicken_nuggets"

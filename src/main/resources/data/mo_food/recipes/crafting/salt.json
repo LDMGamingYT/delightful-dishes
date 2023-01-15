@@ -2,11 +2,11 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "morefood:salt_block"
+            "item": "mo_food:salt_block"
         }
     ],
     "result": {
-        "item": "morefood:salt",
+        "item": "mo_food:salt",
         "count": 9
     }
 }

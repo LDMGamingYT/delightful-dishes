@@ -2,17 +2,17 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "morefood:salt"
+            "item": "mo_food:salt"
         },
         {
             "item": "minecraft:bread"
         },
         {
-            "item": "morefood:garlic"
+            "item": "mo_food:garlic"
         }
     ],
     "result": {
-        "item": "morefood:garlic_bread",
+        "item": "mo_food:garlic_bread",
         "count": 1
     }
 }

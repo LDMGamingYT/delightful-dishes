@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "morefood:salt_ore"
+          "name": "mo_food:salt_ore"
         }
       ],
       "conditions": [

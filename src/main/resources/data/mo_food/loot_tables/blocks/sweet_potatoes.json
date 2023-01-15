@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "morefood:sweet_potato"
+          "name": "mo_food:sweet_potato"
         }
       ]
     },
@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "morefood:sweet_potato",
+          "name": "mo_food:sweet_potato",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -32,7 +32,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "morefood:sweet_potatoes",
+          "block": "mo_food:sweet_potatoes",
           "properties": {
             "age": "7"
           }
@@ -45,7 +45,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "morefood:sweet_potatoes",
+          "block": "mo_food:sweet_potatoes",
           "properties": {
             "age": "7"
           }

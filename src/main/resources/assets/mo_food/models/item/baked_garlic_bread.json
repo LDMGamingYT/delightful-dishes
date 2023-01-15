@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "morefood:item/baked_garlic_bread"
+    "layer0": "mo_food:item/baked_garlic_bread"
   }
 }

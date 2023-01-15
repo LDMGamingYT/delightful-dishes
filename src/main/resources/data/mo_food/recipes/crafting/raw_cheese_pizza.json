@@ -7,17 +7,17 @@
     ],
     "key": {
         "C": {
-            "item": "morefood:cheese"
+            "item": "mo_food:cheese"
         },
         "T": {
-            "item": "morefood:tomato"
+            "item": "mo_food:tomato"
         },
         "#": {
-            "item": "morefood:pizza_dough"
+            "item": "mo_food:pizza_dough"
         }
     },
     "result": {
-        "item": "morefood:raw_cheese_pizza",
+        "item": "mo_food:raw_cheese_pizza",
         "count": 1
     }
 }

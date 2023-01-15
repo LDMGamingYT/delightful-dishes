@@ -1,10 +1,10 @@
 {
     "replace": false,
     "values": [
-        "morefood:stone_knife",
-        "morefood:iron_knife",
-        "morefood:golden_knife",
-        "morefood:diamond_knife",
-        "morefood:netherite_knife"
+        "mo_food:stone_knife",
+        "mo_food:iron_knife",
+        "mo_food:golden_knife",
+        "mo_food:diamond_knife",
+        "mo_food:netherite_knife"
     ]
 }

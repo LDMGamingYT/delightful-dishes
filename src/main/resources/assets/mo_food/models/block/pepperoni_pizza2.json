@@ -1,8 +1,8 @@
 {
 	"textures": {
-		"particle": "morefood:item/pepperoni_pizza",
-		"pizza": "morefood:item/pepperoni_pizza",
-		"bottom": "morefood:item/pizza_bread"
+		"particle": "mo_food:item/pepperoni_pizza",
+		"pizza": "mo_food:item/pepperoni_pizza",
+		"bottom": "mo_food:item/pizza_bread"
 	},
 	"elements": [
 		{
