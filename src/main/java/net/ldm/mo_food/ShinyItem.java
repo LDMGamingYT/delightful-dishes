@@ -3,8 +3,8 @@ package net.ldm.mo_food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class EnchantedMuffinFood extends Item {
-    public EnchantedMuffinFood( Settings item$Settings_1) {
+public class ShinyItem extends Item {
+    public ShinyItem( Settings item$Settings_1) {
         super(item$Settings_1);
     }
 

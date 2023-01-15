@@ -25,9 +25,6 @@
       "net.ldm.mo_food.ClientInit"
     ]
   },
-  "mixins": [
-    "mo_food.mixins.json"
-  ],
 
   "depends": {
     "fabricloader": ">=0.7.4",
