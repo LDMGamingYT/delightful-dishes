@@ -1,8 +1,10 @@
-package net.ldm.mo_food;
+package net.ldm.mo_food.init;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.ldm.mo_food.block.*;
+import net.ldm.mo_food.item.DrinkableItem;
+import net.ldm.mo_food.item.ShinyItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;

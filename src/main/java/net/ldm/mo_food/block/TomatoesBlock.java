@@ -1,7 +1,8 @@
-package net.ldm.mo_food;
+package net.ldm.mo_food.block;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.ldm.mo_food.init.MoFood;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

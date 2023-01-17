@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.ldm.mo_food.MoFood"
+      "net.ldm.mo_food.init.MoFood"
     ],
     "client": [
-      "net.ldm.mo_food.ClientInit"
+      "net.ldm.mo_food.init.ClientInit"
     ]
   },
 

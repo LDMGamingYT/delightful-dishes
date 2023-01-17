@@ -1,10 +1,10 @@
-package net.ldm.mo_food;
+package net.ldm.mo_food.init;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
 
-import static net.ldm.mo_food.MoFood.*;
+import static net.ldm.mo_food.init.MoFood.*;
 
 public class ClientInit implements ClientModInitializer {
     @Override

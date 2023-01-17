@@ -1,4 +1,4 @@
-package net.ldm.mo_food;
+package net.ldm.mo_food.item;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
