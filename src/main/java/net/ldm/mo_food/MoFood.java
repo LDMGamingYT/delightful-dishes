@@ -104,8 +104,7 @@ public class MoFood implements ModInitializer {
     }*/
 
     @Override
-    public void onInitialize()
-    {
+    public void onInitialize() {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "omelet"), OMELET);
         Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "pancakes"), PANCAKES);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pancakes"), new BlockItem(PANCAKES, new Item.Settings()));
@@ -171,7 +170,5 @@ public class MoFood implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "diamond_knife"), DIAMOND_KNIFE);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "netherite_knife"), NETHERITE_KNIFE);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "banana"), BANANA);
-
-
     }
 }
