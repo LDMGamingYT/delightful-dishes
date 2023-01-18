@@ -39,9 +39,9 @@ public class MoFood implements ModInitializer {
     public static final Item SUPER_SALTY_POTATO = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()));
     public static final Item RAW_CHICKEN_NUGGET = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER,30*20,0), 0.3f).build()));
     public static final Item COOKED_CHICKEN_NUGGET = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.3f).snack().build()));
-    //public static final Block TOMATOES = new TomatoesBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH));
+    public static final Block TOMATOES = new TomatoesBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH));
     public static final Item LETTUCE = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).build()));
-    //public static final Block LETTUCE_CROP = new LettuceBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final Block LETTUCE_CROP = new LettuceBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
     public static final Item PIZZA_DOUGH = new Item((new FabricItemSettings()));
     public static final Item CHEESE = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(5).saturationModifier(6.2f).build()));
     public static final Item PIZZA_BREAD = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(8).saturationModifier(8.0f).build()));
@@ -68,7 +68,7 @@ public class MoFood implements ModInitializer {
     public static final Item RAW_BEEF_PATTY = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(1.8f).build()));
     public static final Item COOKED_BEEF_PATTY = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(7).saturationModifier(11.4f).build()));
     public static final Item DETOXIFIED_FLESH = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.25f).build()));
-    //public static final Block GARLIC_CROP = new LettuceBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final Block GARLIC_CROP = new LettuceBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
     public static final Item RAW_GARLIC_BREAD = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(4.6f).build()));
     public static final Item BAKED_GARLIC_BREAD = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(8).saturationModifier(9.6f).build()));
     public static final Item TOAST = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(2).saturationModifier(2.0f).build()));
@@ -117,9 +117,9 @@ public class MoFood implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "muffin"), MUFFIN);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "golden_muffin"), GOLDEN_MUFFIN);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "enchanted_golden_muffin"), ENCHANTED_MUFFIN);
-        //Registry.register(Registries.ITEM, new Identifier(MOD_ID, "sweet_potato"), new BlockItem(SWEET_POTATOES, new FabricItemSettings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).build())));
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "sweet_potato"), new BlockItem(SWEET_POTATOES, new FabricItemSettings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).build())));
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "baked_sweet_potato"), BAKED_SWEET_POTATO);
-        //Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "sweet_potatoes"), SWEET_POTATOES);
+        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "sweet_potatoes"), SWEET_POTATOES);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "salty_potato"), SALTY_POTATO);
         Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "salt_block"), SALT_BLOCK);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "salt_block"), new BlockItem(SALT_BLOCK, new FabricItemSettings()));
@@ -127,10 +127,10 @@ public class MoFood implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "super_salty_potato"), SUPER_SALTY_POTATO);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "chicken_nuggets"), RAW_CHICKEN_NUGGET);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_chicken_nuggets"), COOKED_CHICKEN_NUGGET);
-        //Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "tomatoes"), TOMATOES);
-        //Registry.register(Registries.ITEM, new Identifier(MOD_ID, "tomato"), new BlockItem(TOMATOES, new FabricItemSettings().food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).build())));
-        //Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "lettuce"), LETTUCE_CROP);
-        //Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lettuce"), new BlockItem(LETTUCE_CROP, new FabricItemSettings().food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).snack().build())));
+        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "tomatoes"), TOMATOES);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "tomato"), new BlockItem(TOMATOES, new FabricItemSettings().food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).build())));
+        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "lettuce"), LETTUCE_CROP);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lettuce"), new BlockItem(LETTUCE_CROP, new FabricItemSettings().food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).snack().build())));
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pizza_dough"), PIZZA_DOUGH);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cheese"), CHEESE);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pizza_bread"), PIZZA_BREAD);
@@ -159,8 +159,8 @@ public class MoFood implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "beef_patty"), RAW_BEEF_PATTY);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_beef_patty"), COOKED_BEEF_PATTY);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "detoxified_flesh"), DETOXIFIED_FLESH);
-        //Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "garlic"), GARLIC_CROP);
-        //Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic"), new BlockItem(GARLIC_CROP, new FabricItemSettings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).build())));
+        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "garlic"), GARLIC_CROP);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic"), new BlockItem(GARLIC_CROP, new FabricItemSettings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).build())));
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic_bread"), RAW_GARLIC_BREAD);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "baked_garlic_bread"), BAKED_GARLIC_BREAD);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "toast"), TOAST);
