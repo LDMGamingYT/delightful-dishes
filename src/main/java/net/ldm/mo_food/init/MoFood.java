@@ -1,7 +1,6 @@
 package net.ldm.mo_food.init;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.ldm.mo_food.block.*;
@@ -32,7 +31,7 @@ public class MoFood implements ModInitializer {
     public static final Item ENCHANTED_MUFFIN = new ShinyItem(new FabricItemSettings().rarity(Rarity.RARE).food(new FoodComponent.Builder().hunger(6).alwaysEdible().saturationModifier(9.6f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,10*20,1), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION,120*20,0), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED,15*20,1), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST,15*20,1), 1.0f).build()));
     public static final Item SWEET_POTATO = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).build()));
     public static final Item BAKED_SWEET_POTATO = new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(5).saturationModifier(6.0f).build()));
-    //public static final Block SWEET_POTATOES = new SweetPotatoesBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final Block SWEET_POTATOES = new SweetPotatoesBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
     public static final Item SALTY_POTATO = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(7).saturationModifier(5.8f).build()));
     public static final Block SALT_BLOCK = new Block(AbstractBlock.Settings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND));
     public static final Item SALT = new Item((new FabricItemSettings()));
@@ -82,30 +81,6 @@ public class MoFood implements ModInitializer {
     public static final SwordItem DIAMOND_KNIFE = new SwordItem(ToolMaterials.DIAMOND, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.DIAMOND_KNIFE));
     public static final SwordItem NETHERITE_KNIFE = new SwordItem(ToolMaterials.NETHERITE, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.NETHERITE_KNIFE));
     public static final Item BANANA = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(4).saturationModifier(2.8f).build()));
-
-    /*
-    public static final Block COOKTOP_BLOCK;
-    public static final BlockEntityType COOKTOP_BLOCK_ENTITY;
-    public static final ScreenHandlerType<CooktopScreenHandler> COOKTOP_SCREEN_HANDLER;
-    public static final RecipeType<CooktopRecipe> COOKTOP_RECIPE;
-    public static final RecipeSerializer<CooktopRecipe> COOKTOP_RECIPE_SERIALIZER;
-    */
-
-
-    /*static {
-        //Block
-        COOKTOP_BLOCK = Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cooktop"), new CooktopBlock(FabricBlockSettings.of(Material.METAL)));
-        //BlockItem
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooktop"), new BlockItem(COOKTOP_BLOCK, new FabricItemSettings().group(ItemGroup.DECORATIONS)));
-        //BlockEntity
-        COOKTOP_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MOD_ID, "cooktop"), FabricBlockEntityTypeBuilder.create(CooktopBlockEntity::new, COOKTOP_BLOCK).build(null));
-        COOKTOP_RECIPE = Registry.register(Registry.RECIPE_TYPE, new Identifier(MOD_ID, "cooktop"), new RecipeType<CooktopRecipe>() {
-            @Override
-            public String toString() {return "cooktop";}
-        });
-        COOKTOP_RECIPE_SERIALIZER = Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MOD_ID, "cooktop"), new CookingRecipeSerializer<>(CooktopRecipe::new, 300));
-        COOKTOP_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "cooktop"), CooktopScreenHandler::new);
-    }*/
 
     public void onInitialize() {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "omelet"), OMELET);
