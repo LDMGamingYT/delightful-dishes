@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.ldm.mo_food.init.MoFood"
+    ],
+    "client": [
+      "net.ldm.mo_food.init.ClientInit"
     ]
   },
 
