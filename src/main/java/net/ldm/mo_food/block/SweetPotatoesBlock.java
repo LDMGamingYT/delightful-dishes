@@ -1,4 +1,4 @@
-/*package net.ldm.mo_food.block;
+package net.ldm.mo_food.block;
 
 import net.ldm.mo_food.init.MoFood;
 import net.minecraft.block.PotatoesBlock;
@@ -15,4 +15,3 @@ public class SweetPotatoesBlock extends PotatoesBlock {
         return MoFood.SWEET_POTATO;
     }
 }
-*/
