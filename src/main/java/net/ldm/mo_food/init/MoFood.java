@@ -33,7 +33,7 @@ public class MoFood implements ModInitializer {
     public static final Item SUPER_SALTY_POTATO =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "super_salty_potato"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build())));
     public static final Item RAW_CHICKEN_NUGGET =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "chicken_nugget"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER,30*20,0), 0.3f).build())));
     public static final Item COOKED_CHICKEN_NUGGET =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_chicken_nugget"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.3f).snack().build())));
-    //public static final Block TOMATOES =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "tomoto"), new TomatoesBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
+    //public static final Block TOMATOES =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "tomato"), new TomatoesBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
     public static final Item LETTUCE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lettuce"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).build())));
     //public static final Block LETTUCE_CROP =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lettuce"), new LettuceBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
     public static final Item PIZZA_DOUGH = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pizza_dough"), new Item(new FabricItemSettings()));
@@ -43,7 +43,7 @@ public class MoFood implements ModInitializer {
     //public static final Block PEPPERONI_PIZZA =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pepperoni_pizza"), new PepperoniPizza(FabricBlockSettings.of(Material.CAKE).strength(0.5F).noCollision().sounds(BlockSoundGroup.WOOL)));
     public static final Item RAW_CHEESE_PIZZA = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "raw_cheese_pizza"), new Item(new FabricItemSettings()));
     public static final Item RAW_PEPPERONI_PIZZA = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "raw_pepperoni_pizza"), new Item(new FabricItemSettings()));
-    public static final Item MILK = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "milk"), new Item(new FabricItemSettings()));
+    //public static final Item MILK = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "milk"), new DrinkableItem(new FabricItemSettings()));
     public static final Item PEPPERONI =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pepperoni"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.0f).snack().build())));
     public static final Item RAW_WOLF_MEAT =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "wolf_meat"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().meat().hunger(2).saturationModifier(1.2f).build())));
     public static final Item COOKED_WOLF_MEAT =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_wolf_meat"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().meat().hunger(6).saturationModifier(9.6f).build())));
@@ -149,10 +149,51 @@ public class MoFood implements ModInitializer {
         //TODO: Add all items into creative tabs. (ITEMS WILL NOT LOAD WITHOUT THIS)
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(OMELET);
+            entries.add(RAW_BACON);
+            entries.add(COOKED_BACON);
+            entries.add(MUFFIN);
+            entries.add(GOLDEN_MUFFIN);
+            entries.add(ENCHANTED_MUFFIN);
+            entries.add(SWEET_POTATO);
+            entries.add(BAKED_SWEET_POTATO);
+            entries.add(SALTY_POTATO);
+            entries.add(SUPER_SALTY_POTATO);
+            entries.add(RAW_CHICKEN_NUGGET);
+            entries.add(COOKED_CHICKEN_NUGGET);
+            entries.add(LETTUCE);
+            entries.add(PIZZA_DOUGH);
+            entries.add(CHEESE);
+            entries.add(PIZZA_BREAD);
+            entries.add(RAW_CHEESE_PIZZA);
+            entries.add(RAW_PEPPERONI_PIZZA);
+            entries.add(PEPPERONI);
+            entries.add(RAW_WOLF_MEAT);
+            entries.add(COOKED_WOLF_MEAT);
+            entries.add(RAW_HORSE_MEAT);
+            entries.add(COOKED_HORSE_MEAT);
+            entries.add(RAW_CAT_STEAK);
+            entries.add(COOKED_CAT_STEAK);
+            entries.add(RAW_CALAMARI);
+            entries.add(COOKED_CALAMARI);
+            entries.add(OLIVES);
+            entries.add(LEMON);
+            entries.add(FRENCH_FRIES);
+            entries.add(BUTTER);
+            entries.add(RAW_BEEF_PATTY);
+            entries.add(COOKED_BEEF_PATTY);
+            entries.add(DETOXIFIED_FLESH);
+            entries.add(RAW_GARLIC_BREAD);
+            entries.add(BAKED_GARLIC_BREAD);
+            entries.add(TOAST);
+            entries.add(GARLIC_TOAST);
+            entries.add(BREADSTICKS);
+            entries.add(GARLIC_BREADSTICKS);
+            entries.add(BANANA);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(FLOUR);
+            entries.add(SALT);
         });
     }
 }
