@@ -74,7 +74,8 @@ public class MoFood implements ModInitializer {
     public static final Item RAW_BEEF_PATTY = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "beef_patty"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(1.8f).build())));
     public static final Item COOKED_BEEF_PATTY = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_beef_patty"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(7).saturationModifier(11.4f).build())));
     public static final Item DETOXIFIED_FLESH = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "detoxified_flesh"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.25f).build())));
-    //public static final Block GARLIC_CROP =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), new LettuceBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
+    public static final Block GARLIC_CROP =  Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "garlic"), new LettuceBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
+    public static final Item GARLIC = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lettuce"), new BlockItem(GARLIC_CROP, (new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build())));
     public static final Item RAW_GARLIC_BREAD = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic_bread"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(4.6f).build())));
     public static final Item BAKED_GARLIC_BREAD = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "baked_garlic_bread"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(8).saturationModifier(9.6f).build())));
     public static final Item TOAST = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "toast"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(2).saturationModifier(2.0f).build())));
@@ -140,6 +141,7 @@ public class MoFood implements ModInitializer {
             entries.add(PANCAKES_BLOCK_ITEM);
             entries.add(SWEET_POTATO);
             entries.add(LETTUCE);
+            entries.add(GARLIC);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(FLOUR);
