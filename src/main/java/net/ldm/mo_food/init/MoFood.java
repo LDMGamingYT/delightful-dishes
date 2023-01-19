@@ -21,6 +21,7 @@ public class MoFood implements ModInitializer {
     public static final String MOD_ID = "mo_food";
 
     //TODO: Go through every item until I find what is crashing the game.
+    //TODO: Add BlockItems for every Block
     public static final Item OMELET = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "omelet"), new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(6).saturationModifier(6f).build())));
     public static final Item FLOUR = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), new Item(new FabricItemSettings()));
     //public static final Block PANCAKES =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pancakes"), new PancakesBlock(FabricBlockSettings.of(Material.CAKE).strength(0.5F).sounds(BlockSoundGroup.WOOL)));
@@ -34,6 +35,7 @@ public class MoFood implements ModInitializer {
     //public static final Block SWEET_POTATOES =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "sweet_potato"), new SweetPotatoesBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
     public static final Item SALTY_POTATO =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "salty_potato"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(7).saturationModifier(5.8f).build())));
     public static final Block SALT_BLOCK =  Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "salt_block"), new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND)));
+    public static final BlockItem SALT_BLOCK_ITEM =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "salt_block"), new BlockItem(SALT_BLOCK, new FabricItemSettings()));
     public static final Item SALT = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "salt"), new Item(new FabricItemSettings()));
     public static final Item SUPER_SALTY_POTATO =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "super_salty_potato"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build())));
     public static final Item RAW_CHICKEN_NUGGET =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "chicken_nuggets"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER,30*20,0), 0.3f).build())));
@@ -142,6 +144,6 @@ public class MoFood implements ModInitializer {
             entries.add(DIAMOND_KNIFE);
             entries.add(NETHERITE_KNIFE);
         });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(SALT_BLOCK));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(SALT_BLOCK_ITEM));
     }
 }
