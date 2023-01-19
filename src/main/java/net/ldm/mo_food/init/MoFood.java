@@ -72,11 +72,11 @@ public class MoFood implements ModInitializer {
     public static final Item GARLIC_BREADSTICKS =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic_breadsticks"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).build())));
     public static final Item BANANA =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "banana"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(4).saturationModifier(2.8f).build())));
 
-    //public static final SwordItem STONE_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "stone_knife"), new SwordItem(ToolMaterials.STONE, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.STONE_KNIFE)));
-    //public static final SwordItem IRON_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "iron_knife"), new SwordItem(ToolMaterials.IRON, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.IRON_KNIFE)));
-    //public static final SwordItem GOLDEN_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "golden_knife"), new SwordItem(ToolMaterials.GOLD, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.GOLDEN_KNIFE)));
-    //public static final SwordItem DIAMOND_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "diamond_knife"), new SwordItem(ToolMaterials.DIAMOND, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.DIAMOND_KNIFE)));
-    //public static final SwordItem NETHERITE_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "netherite_knife"), new SwordItem(ToolMaterials.NETHERITE, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.NETHERITE_KNIFE)));
+    public static final SwordItem STONE_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "stone_knife"), new SwordItem(ToolMaterials.STONE, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.STONE_KNIFE)));
+    public static final SwordItem IRON_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "iron_knife"), new SwordItem(ToolMaterials.IRON, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.IRON_KNIFE)));
+    public static final SwordItem GOLDEN_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "golden_knife"), new SwordItem(ToolMaterials.GOLD, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.GOLDEN_KNIFE)));
+    public static final SwordItem DIAMOND_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "diamond_knife"), new SwordItem(ToolMaterials.DIAMOND, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.DIAMOND_KNIFE)));
+    public static final SwordItem NETHERITE_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "netherite_knife"), new SwordItem(ToolMaterials.NETHERITE, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.NETHERITE_KNIFE)));
 
     @Override
     public void onInitialize() {
@@ -127,10 +127,16 @@ public class MoFood implements ModInitializer {
             entries.add(OLIVE_OIL);
             entries.add(LEMON_JUICE);
         });
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(FLOUR);
             entries.add(SALT);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.add(STONE_KNIFE);
+            entries.add(IRON_KNIFE);
+            entries.add(GOLDEN_KNIFE);
+            entries.add(DIAMOND_KNIFE);
+            entries.add(NETHERITE_KNIFE);
         });
     }
 }
