@@ -1,3 +1,4 @@
+/*
 package net.ldm.mo_food.block;
 
 import net.ldm.mo_food.init.MoFood;
@@ -15,3 +16,4 @@ public class LettuceBlock extends PotatoesBlock {
         return MoFood.LETTUCE;
     }
 }
+*/

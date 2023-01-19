@@ -2,6 +2,7 @@ package net.ldm.mo_food.init;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.ldm.mo_food.block.*;
 import net.ldm.mo_food.item.DrinkableItem;
@@ -21,8 +22,9 @@ import net.minecraft.util.Rarity;
 public class MoFood implements ModInitializer {
     public static final String MOD_ID = "mo_food";
 
-    public static final Item OMELET = new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(6).saturationModifier(6f).build()));
-    public static final Item FLOUR = new Item(new FabricItemSettings());
+    //TODO: Go through every item until I find what is crashing the game.
+    public static final Item OMELET = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "omelet"), new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(6).saturationModifier(6f).build())));
+    /*public static final Item FLOUR = new Item(new FabricItemSettings());
     public static final Block PANCAKES = new PancakesBlock(FabricBlockSettings.of(Material.CAKE).strength(0.5F).sounds(BlockSoundGroup.WOOL));
     public static final Item RAW_BACON = new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.2f).statusEffect(new StatusEffectInstance(StatusEffects.POISON,60*20,3), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER,15*20, 2), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,15*20, 1), 1.0f).build()));
     public static final Item COOKED_BACON = new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(2).saturationModifier(1.5f).snack().build()));
@@ -80,11 +82,13 @@ public class MoFood implements ModInitializer {
     public static final SwordItem GOLDEN_KNIFE = new SwordItem(ToolMaterials.GOLD, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.GOLDEN_KNIFE));
     public static final SwordItem DIAMOND_KNIFE = new SwordItem(ToolMaterials.DIAMOND, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.DIAMOND_KNIFE));
     public static final SwordItem NETHERITE_KNIFE = new SwordItem(ToolMaterials.NETHERITE, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.NETHERITE_KNIFE));
-    public static final Item BANANA = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(4).saturationModifier(2.8f).build()));
+    public static final Item BANANA = new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(4).saturationModifier(2.8f).build()));*/
 
+    @Override
     public void onInitialize() {
-        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "omelet"), OMELET);
-        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "pancakes"), PANCAKES);
+        //TODO: Move all of the register() methods into the lambda method (see above)
+        //Registry.register(Registries.ITEM, new Identifier(MOD_ID, "omelet"), OMELET);
+        /*Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "pancakes"), PANCAKES);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pancakes"), new BlockItem(PANCAKES, new FabricItemSettings()));
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), FLOUR);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "bacon"), RAW_BACON);
@@ -147,6 +151,9 @@ public class MoFood implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "golden_knife"), GOLDEN_KNIFE);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "diamond_knife"), DIAMOND_KNIFE);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "netherite_knife"), NETHERITE_KNIFE);
-        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "banana"), BANANA);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, "banana"), BANANA);*/
+
+        //TODO: Add all items into creative tabs. (ITEMS WILL NOT LOAD WITHOUT THIS)
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> entries.add(OMELET));
     }
 }
