@@ -3,6 +3,7 @@ package net.ldm.mo_food.init;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.ldm.mo_food.item.DrinkableItem;
 import net.ldm.mo_food.item.ShinyItem;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -43,7 +44,7 @@ public class MoFood implements ModInitializer {
     //public static final Block PEPPERONI_PIZZA =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pepperoni_pizza"), new PepperoniPizza(FabricBlockSettings.of(Material.CAKE).strength(0.5F).noCollision().sounds(BlockSoundGroup.WOOL)));
     public static final Item RAW_CHEESE_PIZZA = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "raw_cheese_pizza"), new Item(new FabricItemSettings()));
     public static final Item RAW_PEPPERONI_PIZZA = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "raw_pepperoni_pizza"), new Item(new FabricItemSettings()));
-    //public static final Item MILK = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "milk"), new DrinkableItem(new FabricItemSettings()));
+    public static final Item MILK = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "milk"), new DrinkableItem(new FabricItemSettings()));
     public static final Item PEPPERONI =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pepperoni"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.0f).snack().build())));
     public static final Item RAW_WOLF_MEAT =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "wolf_meat"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().meat().hunger(2).saturationModifier(1.2f).build())));
     public static final Item COOKED_WOLF_MEAT =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_wolf_meat"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().meat().hunger(6).saturationModifier(9.6f).build())));
@@ -55,9 +56,9 @@ public class MoFood implements ModInitializer {
     public static final Item COOKED_CALAMARI =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_calamari"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().meat().hunger(5).saturationModifier(6f).build())));
     public static final Item OLIVES =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "olives"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().snack().hunger(1).saturationModifier(1.2f).build())));
     public static final Item LEMON =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lemon"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).build())));
-    //public static final Item OLIVE_OIL = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "olive_oil"), new DrinkableItem(new FabricItemSettings()));
+    public static final Item OLIVE_OIL = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "olive_oil"), new DrinkableItem(new FabricItemSettings()));
     public static final Item FRENCH_FRIES =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "french_fries"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(6).saturationModifier(7.2f).build())));
-    //public static final Item LEMON_JUICE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lemon_juice"), new DrinkableItem(new FabricItemSettings()));
+    public static final Item LEMON_JUICE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lemon_juice"), new DrinkableItem(new FabricItemSettings()));
     public static final Item BUTTER =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "butter"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(4).saturationModifier(1.2f).build())));
     public static final Item RAW_BEEF_PATTY =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "beef_patty"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(1.8f).build())));
     public static final Item COOKED_BEEF_PATTY =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_beef_patty"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(7).saturationModifier(11.4f).build())));
@@ -122,6 +123,9 @@ public class MoFood implements ModInitializer {
             entries.add(BREADSTICKS);
             entries.add(GARLIC_BREADSTICKS);
             entries.add(BANANA);
+            entries.add(MILK);
+            entries.add(OLIVE_OIL);
+            entries.add(LEMON_JUICE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
