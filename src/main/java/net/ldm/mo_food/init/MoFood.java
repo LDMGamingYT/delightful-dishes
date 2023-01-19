@@ -76,7 +76,7 @@ public class MoFood implements ModInitializer {
     //public static final Item GARLIC_TOAST =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(3.2f).build())));
     //public static final Item BREADSTICKS =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.5f).build())));
     //public static final Item GARLIC_BREADSTICKS =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).build())));
-//
+
     //public static final SwordItem STONE_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), new SwordItem(ToolMaterials.STONE, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.STONE_KNIFE)));
     //public static final SwordItem IRON_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), new SwordItem(ToolMaterials.IRON, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.IRON_KNIFE)));
     //public static final SwordItem GOLDEN_KNIFE =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), new SwordItem(ToolMaterials.GOLD, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.GOLDEN_KNIFE)));
@@ -86,8 +86,9 @@ public class MoFood implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        //Registry.register(Registries.ITEM, new Identifier(MOD_ID, "omelet"), OMELET);
-        /*Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "pancakes"), PANCAKES);
+        //TODO: When mod is confirmed to work, delete this.
+        /*Registry.register(Registries.ITEM, new Identifier(MOD_ID, "omelet"), OMELET);
+        Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "pancakes"), PANCAKES);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pancakes"), new BlockItem(PANCAKES, new FabricItemSettings()));
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), FLOUR);
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "bacon"), RAW_BACON);
