@@ -21,8 +21,6 @@ import net.minecraft.util.Rarity;
 public class MoFood implements ModInitializer {
     public static final String MOD_ID = "mo_food";
 
-    //TODO: Go through every item until I find what is crashing the game.
-    //TODO: Add BlockItems for every Block
     public static final Item OMELET = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "omelet"), new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(6).saturationModifier(6f).build())));
     public static final Item FLOUR = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "flour"), new Item(new FabricItemSettings()));
     public static final Block PANCAKES = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "pancakes"), new PancakesBlock(FabricBlockSettings.of(Material.CAKE).strength(0.5F).sounds(BlockSoundGroup.WOOL)));
@@ -93,7 +91,6 @@ public class MoFood implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        //TODO: Add all items into creative tabs. (ITEMS WILL NOT LOAD WITHOUT THIS)
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(OMELET);
             entries.add(RAW_BACON);
