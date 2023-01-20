@@ -21,14 +21,13 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.Random;
-
+@SuppressWarnings("deprecation")
 public class TomatoesBlock extends PlantBlock implements Fertilizable {
     public static IntProperty AGE;
     private static final VoxelShape SMALL_SHAPE;
@@ -40,11 +39,12 @@ public class TomatoesBlock extends PlantBlock implements Fertilizable {
     }
 
     @Environment(EnvType.CLIENT)
-    public ItemStack getPickStack( BlockView world, BlockPos pos, BlockState state) {
+    public ItemStack getPickStack( BlockView world, BlockPos pos, BlockState state ) {
         return new ItemStack(MoFood.TOMATOES);
     }
 
-    public VoxelShape getOutlineShape( @NotNull BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    @Override
+    public VoxelShape getOutlineShape( BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         if (state.get(AGE) == 0) {
             return SMALL_SHAPE;
         } else {
@@ -52,11 +52,12 @@ public class TomatoesBlock extends PlantBlock implements Fertilizable {
         }
     }
 
-    public boolean hasRandomTicks( @NotNull BlockState state) {
+    public boolean hasRandomTicks( @NotNull BlockState state ) {
         return state.get(AGE) < 3;
     }
 
-    public void randomTick( @NotNull BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    @Override
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         int i = state.get(AGE);
         if (i < 3 && random.nextInt(5) == 0 && world.getBaseLightLevel(pos.up(), 0) >= 9) {
             world.setBlockState(pos, state.with(AGE, i + 1), 2);
@@ -64,7 +65,8 @@ public class TomatoesBlock extends PlantBlock implements Fertilizable {
 
     }
 
-    public void onEntityCollision( BlockState state, World world, BlockPos pos, Entity entity, LivingEntity livingEntity) {
+    @Override
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (entity instanceof LivingEntity) {
             entity.slowMovement(state, new Vec3d(0.800000011920929D, 0.75D, 0.800000011920929D));
             if (!world.isClient && state.get(AGE) > 0 && (entity.lastRenderX != entity.getX() || entity.lastRenderZ != entity.getZ())) {
@@ -78,7 +80,7 @@ public class TomatoesBlock extends PlantBlock implements Fertilizable {
         }
     }
 
-    public ActionResult onUse( @NotNull BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ActionResult onUse( @NotNull BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit ) {
         int i = state.get(AGE);
         boolean bl = i == 3;
         if (!bl && player.getStackInHand(hand).getItem() == Items.BONE_MEAL) {
@@ -94,7 +96,7 @@ public class TomatoesBlock extends PlantBlock implements Fertilizable {
         }
     }
 
-    protected void appendProperties( StateManager.@NotNull Builder<Block, BlockState> builder) {
+    protected void appendProperties( StateManager.@NotNull Builder<Block, BlockState> builder ) {
         builder.add(AGE);
     }
 
