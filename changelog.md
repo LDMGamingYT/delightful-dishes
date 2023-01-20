@@ -10,3 +10,5 @@
 * Changed: As of the new creative inventory sorting, all items have been moved to their appropriate tab
 * Changed: Lemon Juice is now drinkable
 * Changed: Milk bottles are now drinkable
+* Changed: Garlic is now eaten quicker
+* Changed: Lettuce is now eaten quicker

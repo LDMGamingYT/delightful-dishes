@@ -4,9 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.ldm.mo_food.block.LettuceBlock;
-import net.ldm.mo_food.block.PancakesBlock;
-import net.ldm.mo_food.block.SweetPotatoesBlock;
+import net.ldm.mo_food.block.*;
 import net.ldm.mo_food.item.DrinkableItem;
 import net.ldm.mo_food.item.ShinyItem;
 import net.minecraft.block.Block;
@@ -44,15 +42,18 @@ public class MoFood implements ModInitializer {
     public static final Item SUPER_SALTY_POTATO = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "super_salty_potato"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build())));
     public static final Item RAW_CHICKEN_NUGGET = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "chicken_nuggets"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 30 * 20, 0), 0.3f).build())));
     public static final Item COOKED_CHICKEN_NUGGET = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_chicken_nuggets"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.3f).snack().build())));
-    //public static final Block TOMATOES =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "tomato"), new TomatoesBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
+    public static final Block TOMATOES =  Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "tomatoes"), new TomatoesBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
+    public static final Item TOMATO = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "tomato"), new BlockItem(TOMATOES, (new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).build())));
     public static final Block LETTUCE_CROP =  Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "lettuce"), new LettuceBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
-    public static final Item LETTUCE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lettuce"), new BlockItem(LETTUCE_CROP, (new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).build())));
+    public static final Item LETTUCE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lettuce"), new BlockItem(LETTUCE_CROP, (new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).snack().build())));
 
     public static final Item PIZZA_DOUGH = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pizza_dough"), new Item(new FabricItemSettings()));
     public static final Item CHEESE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cheese"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(5).saturationModifier(6.2f).build())));
     public static final Item PIZZA_BREAD = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pizza_bread"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(8).saturationModifier(8.0f).build())));
-    //public static final Block CHEESE_PIZZA =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cheese_pizza"), new CheesePizza(FabricBlockSettings.of(Material.CAKE).strength(0.5F).noCollision().sounds(BlockSoundGroup.WOOL)));
-    //public static final Block PEPPERONI_PIZZA =  Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pepperoni_pizza"), new PepperoniPizza(FabricBlockSettings.of(Material.CAKE).strength(0.5F).noCollision().sounds(BlockSoundGroup.WOOL)));
+    public static final Block CHEESE_PIZZA =  Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "cheese_pizza"), new CheesePizza(FabricBlockSettings.of(Material.CAKE).strength(0.5F).noCollision().sounds(BlockSoundGroup.WOOL)));
+    public static final Block PEPPERONI_PIZZA =  Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "pepperoni_pizza"), new PepperoniPizza(FabricBlockSettings.of(Material.CAKE).strength(0.5F).noCollision().sounds(BlockSoundGroup.WOOL)));
+    public static final Item CHEESE_PIZZA_ITEM = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cheese_pizza"), new BlockItem(CHEESE_PIZZA, new FabricItemSettings()));
+    public static final Item PEPPERONI_PIZZA_ITEM = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pepperoni_pizza"), new BlockItem(PEPPERONI_PIZZA, new FabricItemSettings()));
     public static final Item RAW_CHEESE_PIZZA = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "raw_cheese_pizza"), new Item(new FabricItemSettings()));
     public static final Item RAW_PEPPERONI_PIZZA = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "raw_pepperoni_pizza"), new Item(new FabricItemSettings()));
     public static final Item MILK = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "milk"), new DrinkableItem(new FabricItemSettings()));
@@ -74,8 +75,8 @@ public class MoFood implements ModInitializer {
     public static final Item RAW_BEEF_PATTY = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "beef_patty"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(1.8f).build())));
     public static final Item COOKED_BEEF_PATTY = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_beef_patty"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(7).saturationModifier(11.4f).build())));
     public static final Item DETOXIFIED_FLESH = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "detoxified_flesh"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.25f).build())));
-    public static final Block GARLIC_CROP =  Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "garlic"), new LettuceBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
-    public static final Item GARLIC = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lettuce"), new BlockItem(GARLIC_CROP, (new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build())));
+    public static final Block GARLIC_CROP =  Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "garlic"), new GarlicCrop(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
+    public static final Item GARLIC = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic"), new BlockItem(GARLIC_CROP, (new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build())));
     public static final Item RAW_GARLIC_BREAD = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic_bread"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(4.6f).build())));
     public static final Item BAKED_GARLIC_BREAD = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "baked_garlic_bread"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(8).saturationModifier(9.6f).build())));
     public static final Item TOAST = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "toast"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(2).saturationModifier(2.0f).build())));
@@ -141,6 +142,9 @@ public class MoFood implements ModInitializer {
             entries.add(PANCAKES_BLOCK_ITEM);
             entries.add(SWEET_POTATO);
             entries.add(LETTUCE);
+            entries.add(TOMATO);
+            entries.add(CHEESE_PIZZA_ITEM);
+            entries.add(PEPPERONI_PIZZA_ITEM);
             entries.add(GARLIC);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
