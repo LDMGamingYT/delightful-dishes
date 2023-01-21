@@ -57,5 +57,6 @@
   "item.mo_food.golden_knife": "Golden Knife",
   "item.mo_food.diamond_knife": "Diamond Knife",
   "item.mo_food.netherite_knife": "Netherite Knife",
-  "item.mo_food.banana": "Banana"
+  "item.mo_food.banana": "Banana",
+  "block.mo_food.sifter": "Sifter"
 }
