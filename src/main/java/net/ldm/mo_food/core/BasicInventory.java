@@ -2,10 +2,11 @@ package net.ldm.mo_food.core;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.collection.DefaultedList;
 
-public interface Inventory extends net.minecraft.inventory.Inventory {
+public interface BasicInventory extends Inventory {
 
     /**
      * Retrieves the item list of this inventory.
@@ -16,14 +17,14 @@ public interface Inventory extends net.minecraft.inventory.Inventory {
     /**
      * Creates an inventory from the item list.
      */
-    static Inventory of( DefaultedList<ItemStack> items) {
+    static BasicInventory of( DefaultedList<ItemStack> items) {
         return () -> items;
     }
 
     /**
      * Creates a new inventory with the specified size.
      */
-    static Inventory ofSize( int size) {
+    static BasicInventory ofSize( int size) {
         return of(DefaultedList.ofSize(size, ItemStack.EMPTY));
     }
 
