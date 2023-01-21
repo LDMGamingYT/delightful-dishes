@@ -1,8 +1,8 @@
-package net.ldm.mo_food.block;
+package net.ldm.mo_food.block.crop;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.ldm.mo_food.init.MoFood;
+import net.ldm.mo_food.core.init.MoFood;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -28,12 +28,12 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.NotNull;
 @SuppressWarnings("deprecation")
-public class TomatoesBlock extends PlantBlock implements Fertilizable {
+public class TomatoesCrop extends PlantBlock implements Fertilizable {
     public static IntProperty AGE;
     private static final VoxelShape SMALL_SHAPE;
     private static final VoxelShape LARGE_SHAPE;
 
-    public TomatoesBlock( Settings settings ) {
+    public TomatoesCrop( Settings settings ) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0));
     }

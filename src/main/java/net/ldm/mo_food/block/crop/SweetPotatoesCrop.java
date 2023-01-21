@@ -1,12 +1,12 @@
-package net.ldm.mo_food.block;
+package net.ldm.mo_food.block.crop;
 
-import net.ldm.mo_food.init.MoFood;
+import net.ldm.mo_food.core.init.MoFood;
 import net.minecraft.block.PotatoesBlock;
 import net.minecraft.item.ItemConvertible;
 
-public class SweetPotatoesBlock extends PotatoesBlock {
+public class SweetPotatoesCrop extends PotatoesBlock {
 
-    public SweetPotatoesBlock( Settings settings ) {
+    public SweetPotatoesCrop( Settings settings ) {
         super(settings);
     }
 

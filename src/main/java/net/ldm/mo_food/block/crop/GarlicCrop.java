@@ -1,6 +1,6 @@
-package net.ldm.mo_food.block;
+package net.ldm.mo_food.block.crop;
 
-import net.ldm.mo_food.init.MoFood;
+import net.ldm.mo_food.core.init.MoFood;
 import net.minecraft.block.PotatoesBlock;
 import net.minecraft.item.ItemConvertible;
 
