@@ -93,8 +93,7 @@ public class MoFood implements ModInitializer {
 
     public static final Block SIFTER = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "sifter"), new SifterBlock(FabricBlockSettings.of(Material.WOOD).strength(2f).sounds(BlockSoundGroup.WOOL)));
     public static final Item SIFTER_BLOCK_ITEM = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "sifter"), new BlockItem(SIFTER, new FabricItemSettings()));
-    public static final BlockEntityType<SifterBlockEntity> SIFTER_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(MOD_ID, "sifter_block_entity"), FabricBlockEntityTypeBuilder.create(SifterBlockEntity::new, SIFTER).build()
-    );
+    public static final BlockEntityType<SifterBlockEntity> SIFTER_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(MOD_ID, "sifter_block_entity"), FabricBlockEntityTypeBuilder.create(SifterBlockEntity::new, SIFTER).build());
 
     @Override
     public void onInitialize() {
