@@ -1,11 +1,16 @@
-package net.ldm.mo_food.init;
+package net.ldm.mo_food.core.init;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.ldm.mo_food.client.render.SifterBlockEntityRenderer;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
-import static net.ldm.mo_food.init.MoFood.*;
+import static net.ldm.mo_food.core.init.MoFood.*;
 
+/**
+ * Initializer for client-side ONLY.
+ */
 public class ClientInit implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
@@ -13,6 +18,8 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(TOMATOES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(LETTUCE_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GARLIC_CROP, RenderLayer.getCutout());
-        //ScreenRegistry.register(MoFood.COOKTOP_SCREEN_HANDLER, CooktopScreen::new);
+        BlockRenderLayerMap.INSTANCE.putBlock(SIFTER, RenderLayer.getCutout());
+
+        BlockEntityRendererFactories.register(SIFTER_BLOCK_ENTITY, SifterBlockEntityRenderer::new);
     }
 }
