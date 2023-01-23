@@ -63,7 +63,6 @@ public class LangDataProvider extends FabricLanguageProvider {
         builder.add(SALT, "Ground Salt");
         builder.add(SALTY_POTATO, "Salty Potato");
         builder.add(SUPER_SALTY_POTATO, "Super Salty Potato");
-        builder.add(SWEET_POTATO, "Sweet Potato");
         builder.add(TOAST, "Toast");
         builder.add(RAW_WOLF_MEAT, "Raw Wolf Meat");
 
