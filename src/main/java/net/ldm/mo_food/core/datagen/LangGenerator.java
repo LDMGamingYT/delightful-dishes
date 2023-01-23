@@ -5,8 +5,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
 import static net.ldm.mo_food.core.init.MoFood.*;
 
-public class LangDataProvider extends FabricLanguageProvider {
-    protected LangDataProvider( FabricDataOutput dataOutput ) {
+public class LangGenerator extends FabricLanguageProvider {
+    protected LangGenerator( FabricDataOutput dataOutput ) {
         super(dataOutput, "en_us");
     }
 
