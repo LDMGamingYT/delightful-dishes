@@ -16,16 +16,17 @@ public class ModelGenerator extends FabricModelProvider {
     @Override
     public void generateBlockStateModels( BlockStateModelGenerator generator ) {
         generator.registerSimpleCubeAll(SALT_BLOCK);
-        //TODO: Add the rest of the block models
+        //generator.register(PANCAKES_BLOCK_ITEM, Models.); //this one requires blockstate variants... //TODO: pancakes
+        //TODO: carrots crop
+        //TODO: cheese pizza
+        //TODO: garlic crop
+        //TODO: pepperoni pizza
+        //TODO: sweet potatoes crop
+        //TODO: tomato bush crop
     }
 
     @Override
     public void generateItemModels( ItemModelGenerator generator ) {
-        //TODO: Add those block-looking item models
-        generator.register(PANCAKES_BLOCK_ITEM, Models.);
-        generator.register(SALT_BLOCK_ITEM, Models.);
-        generator.register(SIFTER_BLOCK_ITEM, Models.);
-
         generator.register(GARLIC, Models.GENERATED);
         generator.register(LETTUCE, Models.GENERATED);
         generator.register(SWEET_POTATO, Models.GENERATED);
