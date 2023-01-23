@@ -56,7 +56,7 @@ public class MoFood implements ModInitializer {
     public static final Item PEPPERONI_PIZZA_ITEM = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pepperoni_pizza"), new BlockItem(PEPPERONI_PIZZA, new FabricItemSettings()));
     public static final Item RAW_CHEESE_PIZZA = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "raw_cheese_pizza"), new Item(new FabricItemSettings()));
     public static final Item RAW_PEPPERONI_PIZZA = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "raw_pepperoni_pizza"), new Item(new FabricItemSettings()));
-    public static final Item MILK = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "milk"), new DrinkableItem(new FabricItemSettings()));
+    public static final Item CURDLED_MILK_BOTTLE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "curdled_milk_bottle"), new DrinkableItem(new FabricItemSettings()));
     public static final Item PEPPERONI = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pepperoni"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.0f).snack().build())));
     public static final Item RAW_WOLF_MEAT = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "wolf_meat"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().meat().hunger(2).saturationModifier(1.2f).build())));
     public static final Item COOKED_WOLF_MEAT = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_wolf_meat"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().meat().hunger(6).saturationModifier(9.6f).build())));
@@ -139,7 +139,7 @@ public class MoFood implements ModInitializer {
             entries.add(BREADSTICKS);
             entries.add(GARLIC_BREADSTICKS);
             entries.add(BANANA);
-            entries.add(MILK);
+            entries.add(CURDLED_MILK_BOTTLE);
             entries.add(OLIVE_OIL);
             entries.add(LEMON_JUICE);
             entries.add(PANCAKES_BLOCK_ITEM);
