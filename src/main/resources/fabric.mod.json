@@ -23,6 +23,9 @@
     ],
     "client": [
       "net.ldm.mo_food.core.init.ClientInit"
+    ],
+    "fabric-datagen": [
+      "net.ldm.mo_food.core.datagen.DataGen"
     ]
   },
 
