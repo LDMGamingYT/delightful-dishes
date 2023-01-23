@@ -14,8 +14,8 @@ public class LangGenerator extends FabricLanguageProvider {
     public void generateTranslations( TranslationBuilder builder ) {
         // Blocks
         builder.add(CHEESE_PIZZA, "Cheese Pizza");
-        builder.add(GARLIC, "Garlic");
-        builder.add(LETTUCE, "Lettuce");
+        builder.add(GARLIC_CROP, "Garlic");
+        builder.add(LETTUCE_CROP, "Lettuce");
         builder.add(PANCAKES, "Pancakes");
         builder.add(PEPPERONI_PIZZA, "Pepperoni Pizza");
         builder.add(SALT_BLOCK, "Block of Ground Salt");
