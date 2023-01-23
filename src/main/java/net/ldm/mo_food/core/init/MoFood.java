@@ -80,7 +80,7 @@ public class MoFood implements ModInitializer {
     public static final Item RAW_GARLIC_BREAD = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic_bread"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(4.6f).build())));
     public static final Item BAKED_GARLIC_BREAD = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "baked_garlic_bread"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(8).saturationModifier(9.6f).build())));
     public static final Item TOAST = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "toast"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(2).saturationModifier(2.0f).build())));
-    public static final Item GARLIC_TOAST = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic_bread_slice"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(3.2f).build())));
+    public static final Item GARLIC_BREAD_SLICE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic_bread_slice"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(3.2f).build())));
     public static final Item BREADSTICKS = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "breadsticks"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.5f).build())));
     public static final Item GARLIC_BREADSTICKS = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic_breadsticks"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).build())));
     public static final Item BANANA = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "banana"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(4).saturationModifier(2.8f).build())));
@@ -135,7 +135,7 @@ public class MoFood implements ModInitializer {
             entries.add(RAW_GARLIC_BREAD);
             entries.add(BAKED_GARLIC_BREAD);
             entries.add(TOAST);
-            entries.add(GARLIC_TOAST);
+            entries.add(GARLIC_BREAD_SLICE);
             entries.add(BREADSTICKS);
             entries.add(GARLIC_BREADSTICKS);
             entries.add(BANANA);
