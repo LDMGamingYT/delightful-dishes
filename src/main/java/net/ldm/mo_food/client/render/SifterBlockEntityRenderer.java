@@ -18,23 +18,33 @@ import net.minecraft.world.World;
 
 @Environment(EnvType.CLIENT)
 public class SifterBlockEntityRenderer implements BlockEntityRenderer<SifterBlockEntity> {
-    private static final ItemStack ITEM = new ItemStack(Items.JUKEBOX, 1);
+    private static ItemStack item = ItemStack.EMPTY;
 
     public SifterBlockEntityRenderer(BlockEntityRendererFactory.Context ctx) {}
 
+    public void updateItem(SifterBlockEntity blockEntity) {
+        item = blockEntity.getStack(0);
+    }
+
+    //TODO: Fix item not disappearing after being removed (possible client desync?)
     @Override
     public void render( SifterBlockEntity blockEntity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay ) {
-        World world = blockEntity.getWorld();
-        assert world != null;
+        updateItem(blockEntity);
+        System.out.println(item+": "+!(item.isEmpty() || item.isOf(Items.AIR)));
 
         matrices.push();
 
-        double offset = Math.sin((world.getTime() + tickDelta) / 8.0) / 4.0; // Calculate the current offset in the y value
-        matrices.translate(0.5, 1.25 + offset, 0.5); // Move the item
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees((world.getTime() + tickDelta) * 4)); // Rotate the item
+        World world = blockEntity.getWorld();
+        assert world != null;
 
-        int lightAbove = WorldRenderer.getLightmapCoordinates(blockEntity.getWorld(), blockEntity.getPos().up());
-        MinecraftClient.getInstance().getItemRenderer().renderItem(ITEM, ModelTransformation.Mode.GROUND, lightAbove, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, 0);
+        if (!(item.isEmpty() || item.isOf(Items.AIR))) {
+            double offset = Math.sin((world.getTime() + tickDelta) / 8.0) / 4.0; // Calculate the current offset in the y value
+            matrices.translate(0.5, 1.25 + offset, 0.5); // Move the item
+            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees((world.getTime() + tickDelta) * 4)); // Rotate the item
+
+            int lightAbove = WorldRenderer.getLightmapCoordinates(blockEntity.getWorld(), blockEntity.getPos().up());
+            MinecraftClient.getInstance().getItemRenderer().renderItem(item, ModelTransformation.Mode.GROUND, lightAbove, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, 0);
+        }
 
         matrices.pop();
     }

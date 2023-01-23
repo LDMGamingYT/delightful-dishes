@@ -5,9 +5,9 @@ import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -16,6 +16,8 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+
+import java.util.Objects;
 
 public class SifterBlock extends Block implements BlockEntityProvider {
     private static final VoxelShape LEG_1;
@@ -38,25 +40,45 @@ public class SifterBlock extends Block implements BlockEntityProvider {
         return new SifterBlockEntity(pos, state);
     }
 
+    //TODO: Fix item not disappearing after being removed (possible client desync?)
     @SuppressWarnings("deprecation")
     @Override
     public ActionResult onUse( BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit ) {
         if (world.isClient) return ActionResult.SUCCESS;
         if (!(world.getBlockEntity(pos) instanceof SifterBlockEntity blockEntity)) return ActionResult.SUCCESS;
+        ItemStack playerStack = player.getStackInHand(hand);
 
-        if (player.getStackInHand(hand).isEmpty()) return ActionResult.SUCCESS;
-
-        if (blockEntity.getStack(0).isEmpty()) {
+        if (blockEntity.getStack(0).isEmpty()) { // inventory empty, hand full
+            if (playerStack.isEmpty()) return ActionResult.SUCCESS;
             blockEntity.setStack(0, player.getStackInHand(hand).copy());
-            player.getStackInHand(hand).decrement(1);
+            playerStack.decrement(1);
         } else {
-            player.setStackInHand(hand, blockEntity.getStack(0));
-            blockEntity.setStack(0, ItemStack.EMPTY);
+            if (playerStack.isEmpty()) { //inventory full, hand empty
+                player.setStackInHand(hand, blockEntity.getStack(0));
+                blockEntity.setStack(0, ItemStack.EMPTY);
+            } else { //inventory full, hand full
+                ItemStack switchStack = blockEntity.getStack(0);
+                blockEntity.setStack(0, playerStack);
+                player.setStackInHand(hand, switchStack);
+            }
         }
+        blockEntity.markDirty();
 
-        player.sendMessage(Text.of("Item: " + blockEntity.getStack(0)), false);
+        world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
+        System.out.println("updating listeners @ "+pos.toShortString()+" to "+blockEntity.getStack(0));
 
         return ActionResult.SUCCESS;
+    }
+
+    @Override
+    public void onBreak( World world, BlockPos pos, BlockState state, PlayerEntity player ) {
+        System.out.println(pos);
+        System.out.println(world.getBlockEntity(pos));
+        if (!(world.getBlockEntity(pos) instanceof SifterBlockEntity blockEntity)) return;
+        world.spawnEntity(new ItemEntity(Objects.requireNonNull(blockEntity.getWorld()), pos.getX(), pos.getY(), pos.getZ(), blockEntity.getStack(0)));
+        System.out.println("Spawning "+blockEntity.getStack(0)+" in "+blockEntity.getWorld()+" at "+pos);
+        super.onBreak(world, pos, state, player);
+        world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
     }
 
     @SuppressWarnings("deprecation")
