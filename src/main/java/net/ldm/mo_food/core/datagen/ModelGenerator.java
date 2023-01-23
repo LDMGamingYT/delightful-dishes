@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.state.property.IntProperty;
 
 import static net.ldm.mo_food.core.init.MoFood.*;
 
@@ -17,12 +18,12 @@ public class ModelGenerator extends FabricModelProvider {
     public void generateBlockStateModels( BlockStateModelGenerator generator ) {
         generator.registerSimpleCubeAll(SALT_BLOCK);
         //generator.register(PANCAKES_BLOCK_ITEM, Models.); //this one requires blockstate variants... //TODO: pancakes
-        //TODO: carrots crop
+        generator.registerCrop(LETTUCE_CROP, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
         //TODO: cheese pizza
-        //TODO: garlic crop
+        generator.registerCrop(GARLIC_CROP, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
         //TODO: pepperoni pizza
-        //TODO: sweet potatoes crop
-        //TODO: tomato bush crop
+        generator.registerCrop(SWEET_POTATOES, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
+        generator.registerCrop(TOMATOES, IntProperty.of("age", 0, 3));
     }
 
     @Override
