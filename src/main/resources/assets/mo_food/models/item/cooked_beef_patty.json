@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures":
-  {
-    "layer0": "mo_food:item/cooked_beef_patty"
-  }
-}
