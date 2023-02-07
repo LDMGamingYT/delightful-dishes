@@ -7,7 +7,10 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.ldm.mo_food.block.*;
 import net.ldm.mo_food.block.crop.*;
+import net.ldm.mo_food.block.entity.SifterBlockEntity;
 import net.ldm.mo_food.item.*;
+import net.ldm.mo_food.recipe.SiftingRecipe;
+import net.ldm.mo_food.recipe.SiftingRecipeSerializer;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
@@ -163,5 +166,8 @@ public class MoFood implements ModInitializer {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(SALT_BLOCK_ITEM));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> entries.add(SIFTER_BLOCK_ITEM));
+
+        Registry.register(Registries.RECIPE_SERIALIZER, SiftingRecipeSerializer.ID, SiftingRecipeSerializer.INSTANCE);
+        Registry.register(Registries.RECIPE_TYPE, new Identifier(MOD_ID, SiftingRecipe.Type.ID), SiftingRecipe.Type.INSTANCE);
     }
 }
