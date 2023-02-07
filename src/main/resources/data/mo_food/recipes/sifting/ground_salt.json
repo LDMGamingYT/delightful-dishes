@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:coarse_dirt"
+  },
+  "result": "minecraft:flint",
+  "min": "1",
+  "max": "2"
+}
