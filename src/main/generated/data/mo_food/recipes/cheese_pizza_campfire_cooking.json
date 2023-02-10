@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "group": "cheese_pizza",
+  "ingredient": {
+    "item": "mo_food:raw_cheese_pizza"
+  },
+  "result": "mo_food:cheese_pizza"
+}

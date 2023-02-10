@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "butter",
+  "ingredient": {
+    "item": "mo_food:curdled_milk_bottle"
+  },
+  "result": "mo_food:butter"
+}

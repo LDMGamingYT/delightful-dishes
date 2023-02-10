@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "group": "baked_garlic_bread",
+  "ingredient": {
+    "item": "mo_food:garlic_bread"
+  },
+  "result": "mo_food:baked_garlic_bread"
+}

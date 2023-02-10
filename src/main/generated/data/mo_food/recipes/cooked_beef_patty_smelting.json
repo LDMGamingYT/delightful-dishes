@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "cooked_beef_patty",
+  "ingredient": {
+    "item": "mo_food:beef_patty"
+  },
+  "result": "mo_food:cooked_beef_patty"
+}
