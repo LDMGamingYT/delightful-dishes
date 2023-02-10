@@ -1,10 +1,15 @@
 package net.ldm.mo_food.block;
 
+import net.ldm.mo_food.block.entity.SifterBlockEntity;
+import net.ldm.mo_food.core.init.MoFood;
+import net.ldm.mo_food.recipe.SiftingRecipe;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -16,8 +21,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
-import java.util.Objects;
+import java.util.Optional;
 
 public class SifterBlock extends Block implements BlockEntityProvider {
     private static final VoxelShape LEG_1;
@@ -46,8 +52,10 @@ public class SifterBlock extends Block implements BlockEntityProvider {
     public ActionResult onUse( BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit ) {
         if (world.isClient) return ActionResult.SUCCESS;
         if (!(world.getBlockEntity(pos) instanceof SifterBlockEntity blockEntity)) return ActionResult.SUCCESS;
-        ItemStack playerStack = player.getStackInHand(hand);
 
+        if (SifterBlockEntity.inUse) return ActionResult.SUCCESS;
+
+        ItemStack playerStack = player.getStackInHand(hand);
         if (blockEntity.getStack(0).isEmpty()) { // inventory empty, hand full
             if (playerStack.isEmpty()) return ActionResult.SUCCESS;
             blockEntity.setStack(0, player.getStackInHand(hand).copy());
@@ -62,21 +70,32 @@ public class SifterBlock extends Block implements BlockEntityProvider {
                 player.setStackInHand(hand, switchStack);
             }
         }
+        Optional<SiftingRecipe> result = world.getRecipeManager().getFirstMatch(SiftingRecipe.Type.INSTANCE, blockEntity, world);
+        if (result.isEmpty()) return ActionResult.SUCCESS;
+
+        blockEntity.animationStartTime = world.getTime();
+        SifterBlockEntity.storedResult = result;
+
         blockEntity.markDirty();
+        blockEntity.markInUse();
 
         world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
-        System.out.println("updating listeners @ "+pos.toShortString()+" to "+blockEntity.getStack(0));
-
         return ActionResult.SUCCESS;
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        if (!type.equals(MoFood.SIFTER_BLOCK_ENTITY)) {
+            throw new IllegalArgumentException("Unexpected block entity type");
+        }
+        return (world1, pos, state1, be) -> SifterBlockEntity.tick(world1, pos, state1, (SifterBlockEntity) be);
     }
 
     @Override
     public void onBreak( World world, BlockPos pos, BlockState state, PlayerEntity player ) {
-        System.out.println(pos);
-        System.out.println(world.getBlockEntity(pos));
         if (!(world.getBlockEntity(pos) instanceof SifterBlockEntity blockEntity)) return;
-        world.spawnEntity(new ItemEntity(Objects.requireNonNull(blockEntity.getWorld()), pos.getX(), pos.getY(), pos.getZ(), blockEntity.getStack(0)));
-        System.out.println("Spawning "+blockEntity.getStack(0)+" in "+blockEntity.getWorld()+" at "+pos);
+        world.spawnEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), blockEntity.getStack(0)));
         super.onBreak(world, pos, state, player);
         world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
     }
