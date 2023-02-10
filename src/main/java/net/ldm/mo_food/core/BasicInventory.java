@@ -8,6 +8,10 @@ import net.minecraft.util.collection.DefaultedList;
 
 public interface BasicInventory extends Inventory {
 
+    default BasicInventory inventory() {
+        return this;
+    }
+
     /**
      * Retrieves the item list of this inventory.
      * Must return the same instance every time it's called.
