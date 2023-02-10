@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mo_food:garlic_bread_slice"
+    },
+    {
+      "tag": "mo_food:knives"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "mo_food:garlic_breadsticks"
+  }
+}

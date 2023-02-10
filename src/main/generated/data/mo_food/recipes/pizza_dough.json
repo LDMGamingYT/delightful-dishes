@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mo_food:flour"
+    },
+    {
+      "item": "mo_food:flour"
+    },
+    {
+      "item": "mo_food:flour"
+    },
+    {
+      "item": "mo_food:flour"
+    },
+    {
+      "item": "mo_food:flour"
+    },
+    {
+      "item": "mo_food:flour"
+    },
+    {
+      "item": "mo_food:flour"
+    },
+    {
+      "item": "mo_food:flour"
+    },
+    {
+      "item": "mo_food:flour"
+    }
+  ],
+  "result": {
+    "item": "mo_food:pizza_dough"
+  }
+}

@@ -10,7 +10,6 @@ import net.ldm.mo_food.block.crop.*;
 import net.ldm.mo_food.block.entity.SifterBlockEntity;
 import net.ldm.mo_food.item.*;
 import net.ldm.mo_food.recipe.SiftingRecipe;
-import net.ldm.mo_food.recipe.SiftingRecipeSerializer;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
@@ -39,9 +38,9 @@ public class MoFood implements ModInitializer {
     public static final Block SWEET_POTATOES = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "sweet_potatoes"), new SweetPotatoesCrop(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
     public static final Item SWEET_POTATO = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "sweet_potato"), new BlockItem(SWEET_POTATOES, (new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).build())));
     public static final Item SALTY_POTATO = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "salty_potato"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(7).saturationModifier(5.8f).build())));
-    public static final Block SALT_BLOCK = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "salt_block"), new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND)));
-    public static final BlockItem SALT_BLOCK_ITEM = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "salt_block"), new BlockItem(SALT_BLOCK, new FabricItemSettings()));
-    public static final Item SALT = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "salt"), new Item(new FabricItemSettings()));
+    public static final Block GROUND_SALT_BLOCK = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "ground_salt_block"), new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND)));
+    public static final BlockItem GROUND_SALT_BLOCK_ITEM = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "ground_salt_block"), new BlockItem(GROUND_SALT_BLOCK, new FabricItemSettings()));
+    public static final Item GROUND_SALT = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "ground_salt"), new Item(new FabricItemSettings()));
     public static final Item SUPER_SALTY_POTATO = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "super_salty_potato"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build())));
     public static final Item RAW_CHICKEN_NUGGET = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "chicken_nuggets"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 30 * 20, 0), 0.3f).build())));
     public static final Item COOKED_CHICKEN_NUGGET = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_chicken_nuggets"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.3f).snack().build())));
@@ -155,7 +154,7 @@ public class MoFood implements ModInitializer {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(FLOUR);
-            entries.add(SALT);
+            entries.add(GROUND_SALT);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(STONE_KNIFE);
@@ -164,10 +163,10 @@ public class MoFood implements ModInitializer {
             entries.add(DIAMOND_KNIFE);
             entries.add(NETHERITE_KNIFE);
         });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(SALT_BLOCK_ITEM));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(GROUND_SALT_BLOCK_ITEM));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> entries.add(SIFTER_BLOCK_ITEM));
 
-        Registry.register(Registries.RECIPE_SERIALIZER, SiftingRecipeSerializer.ID, SiftingRecipeSerializer.INSTANCE);
+        Registry.register(Registries.RECIPE_SERIALIZER, SiftingRecipe.Serializer.ID, SiftingRecipe.Serializer.INSTANCE);
         Registry.register(Registries.RECIPE_TYPE, new Identifier(MOD_ID, SiftingRecipe.Type.ID), SiftingRecipe.Type.INSTANCE);
     }
 }

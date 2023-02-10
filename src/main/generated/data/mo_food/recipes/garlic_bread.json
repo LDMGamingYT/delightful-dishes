@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mo_food:ground_salt"
+    },
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "mo_food:garlic"
+    }
+  ],
+  "result": {
+    "item": "mo_food:garlic_bread"
+  }
+}

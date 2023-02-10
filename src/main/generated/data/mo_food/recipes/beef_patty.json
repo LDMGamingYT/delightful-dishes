@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "item": "mo_food:ground_salt"
+    }
+  ],
+  "result": {
+    "item": "mo_food:beef_patty"
+  }
+}

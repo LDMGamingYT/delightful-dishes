@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mo_food:breadsticks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_toast": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mo_food:toast"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_toast",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mo_food:breadsticks"
+    ]
+  }
+}

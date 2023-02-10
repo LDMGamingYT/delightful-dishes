@@ -1,0 +1,9 @@
+{
+  "type": "mo_food:sifting",
+  "ingredient": {
+    "item": "minecraft:coarse_dirt"
+  },
+  "result": "mo_food:ground_salt",
+  "min": "1",
+  "max": "2"
+}

@@ -18,7 +18,7 @@ public class LangGenerator extends FabricLanguageProvider {
         builder.add(LETTUCE_CROP, "Lettuce");
         builder.add(PANCAKES, "Pancakes");
         builder.add(PEPPERONI_PIZZA, "Pepperoni Pizza");
-        builder.add(SALT_BLOCK, "Block of Ground Salt");
+        builder.add(GROUND_SALT_BLOCK, "Block of Ground Salt");
         builder.add(SIFTER, "Sifter");
         builder.add(SWEET_POTATOES, "Sweet Potatoes");
         builder.add(TOMATOES, "Tomatoes");
@@ -60,7 +60,7 @@ public class LangGenerator extends FabricLanguageProvider {
         builder.add(PIZZA_DOUGH, "Pizza Dough");
         builder.add(RAW_CHEESE_PIZZA, "Raw Cheese Pizza");
         builder.add(RAW_PEPPERONI_PIZZA, "Raw Pepperoni Pizza");
-        builder.add(SALT, "Ground Salt");
+        builder.add(GROUND_SALT, "Ground Salt");
         builder.add(SALTY_POTATO, "Salty Potato");
         builder.add(SUPER_SALTY_POTATO, "Super Salty Potato");
         builder.add(TOAST, "Toast");

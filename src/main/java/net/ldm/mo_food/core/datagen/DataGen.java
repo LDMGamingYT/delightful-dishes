@@ -9,6 +9,7 @@ public class DataGen implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(LangGenerator::new);
         pack.addProvider(ModelGenerator::new);
+        pack.addProvider(RecipeGenerator::new);
         //TODO: Try to make most things datagen
     }
 }

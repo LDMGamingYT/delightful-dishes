@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mo_food:olive_oil"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "mo_food:ground_salt"
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "result": {
+    "item": "mo_food:french_fries"
+  }
+}

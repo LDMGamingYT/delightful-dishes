@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "mo_food:diamond_knife"
+  },
+  "result": {
+    "item": "mo_food:netherite_knife"
+  }
+}

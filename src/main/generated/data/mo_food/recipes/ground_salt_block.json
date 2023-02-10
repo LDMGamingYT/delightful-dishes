@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mo_food:ground_salt"
+    },
+    {
+      "item": "mo_food:ground_salt"
+    },
+    {
+      "item": "mo_food:ground_salt"
+    },
+    {
+      "item": "mo_food:ground_salt"
+    },
+    {
+      "item": "mo_food:ground_salt"
+    },
+    {
+      "item": "mo_food:ground_salt"
+    },
+    {
+      "item": "mo_food:ground_salt"
+    },
+    {
+      "item": "mo_food:ground_salt"
+    },
+    {
+      "item": "mo_food:ground_salt"
+    }
+  ],
+  "result": {
+    "item": "mo_food:ground_salt_block"
+  }
+}

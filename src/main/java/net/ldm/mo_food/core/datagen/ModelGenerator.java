@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
-import net.minecraft.state.property.IntProperty;
 
 import static net.ldm.mo_food.core.init.MoFood.*;
 
@@ -16,14 +15,14 @@ public class ModelGenerator extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels( BlockStateModelGenerator generator ) {
-        generator.registerSimpleCubeAll(SALT_BLOCK);
+        generator.registerSimpleCubeAll(GROUND_SALT_BLOCK);
         //generator.register(PANCAKES_BLOCK_ITEM, Models.); //this one requires blockstate variants... //TODO: pancakes
-        generator.registerCrop(LETTUCE_CROP, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
+        /*generator.registerCrop(LETTUCE_CROP, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
         //TODO: cheese pizza
         generator.registerCrop(GARLIC_CROP, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
         //TODO: pepperoni pizza
         generator.registerCrop(SWEET_POTATOES, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
-        generator.registerCrop(TOMATOES, IntProperty.of("age", 0, 3));
+        generator.registerCrop(TOMATOES, IntProperty.of("age", 0, 3));*/
     }
 
     @Override
@@ -71,7 +70,7 @@ public class ModelGenerator extends FabricModelProvider {
         generator.register(PIZZA_DOUGH, Models.GENERATED);
         generator.register(RAW_CHEESE_PIZZA, Models.GENERATED);
         generator.register(RAW_PEPPERONI_PIZZA, Models.GENERATED);
-        generator.register(SALT, Models.GENERATED);
+        generator.register(GROUND_SALT, Models.GENERATED);
         generator.register(SALTY_POTATO, Models.GENERATED);
         generator.register(SUPER_SALTY_POTATO, Models.GENERATED);
         generator.register(TOAST, Models.GENERATED);
