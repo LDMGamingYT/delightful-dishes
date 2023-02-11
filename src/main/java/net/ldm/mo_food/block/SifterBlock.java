@@ -46,14 +46,13 @@ public class SifterBlock extends Block implements BlockEntityProvider {
         return new SifterBlockEntity(pos, state);
     }
 
-    //TODO: Fix item not disappearing after being removed (possible client desync?)
     @SuppressWarnings("deprecation")
     @Override
     public ActionResult onUse( BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit ) {
         if (world.isClient) return ActionResult.SUCCESS;
         if (!(world.getBlockEntity(pos) instanceof SifterBlockEntity blockEntity)) return ActionResult.SUCCESS;
 
-        if (SifterBlockEntity.inUse) return ActionResult.SUCCESS;
+        if (blockEntity.inUse) return ActionResult.SUCCESS;
 
         ItemStack playerStack = player.getStackInHand(hand);
         if (blockEntity.getStack(0).isEmpty()) { // inventory empty, hand full
@@ -71,13 +70,12 @@ public class SifterBlock extends Block implements BlockEntityProvider {
             }
         }
         Optional<SiftingRecipe> result = world.getRecipeManager().getFirstMatch(SiftingRecipe.Type.INSTANCE, blockEntity, world);
-        if (result.isEmpty()) return ActionResult.SUCCESS;
 
         blockEntity.animationStartTime = world.getTime();
-        SifterBlockEntity.storedResult = result;
+        blockEntity.inUse = true;
+        blockEntity.storedResult = result.map(SiftingRecipe::getOutput).orElse(null);
 
         blockEntity.markDirty();
-        blockEntity.markInUse();
 
         world.updateListeners(pos, state, state, Block.NOTIFY_LISTENERS);
         return ActionResult.SUCCESS;
@@ -86,10 +84,8 @@ public class SifterBlock extends Block implements BlockEntityProvider {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        if (!type.equals(MoFood.SIFTER_BLOCK_ENTITY)) {
-            throw new IllegalArgumentException("Unexpected block entity type");
-        }
-        return (world1, pos, state1, be) -> SifterBlockEntity.tick(world1, pos, state1, (SifterBlockEntity) be);
+        if (!type.equals(MoFood.SIFTER_BLOCK_ENTITY)) throw new IllegalArgumentException("Unexpected block entity type");
+        return (world1, pos, state1, blockEntity) -> SifterBlockEntity.tick(world1, pos, (SifterBlockEntity) blockEntity);
     }
 
     @Override
