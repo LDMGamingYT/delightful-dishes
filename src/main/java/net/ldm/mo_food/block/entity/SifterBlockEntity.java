@@ -14,6 +14,7 @@ import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -52,8 +53,10 @@ public class SifterBlockEntity extends BlockEntity implements BasicInventory {
         if (world.getTime() - blockEntity.animationStartTime == 45) {
             if (blockEntity.storedResultStack == null)
                 world.spawnEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), blockEntity.getStack(0).copyWithCount(1))); //spawn input item
-            else
-                world.spawnEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), blockEntity.storedResultStack.copy())); //spawn recipe result
+            else {
+                if (Random.create().nextFloat() < blockEntity.storedResultChance)
+                    world.spawnEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), blockEntity.storedResultStack.copy())); //spawn recipe result
+            }
 
             blockEntity.setStack(0, ItemStack.EMPTY);
             blockEntity.inUse = false;
