@@ -37,7 +37,7 @@ public class LangGenerator extends FabricLanguageProvider {
         builder.add(COOKED_BEEF_PATTY, "Cooked Beef Patty");
         builder.add(COOKED_CALAMARI, "Cooked Calamari");
         builder.add(COOKED_CAT_STEAK, "Cooked Cat Steak");
-        builder.add(COOKED_CHICKEN_NUGGET, "Cooked Chicken Nuggets");
+        builder.add(COOKED_CHICKEN_NUGGETS, "Cooked Chicken Nuggets");
         builder.add(COOKED_HORSE_MEAT, "Cooked Horse Meat");
         builder.add(COOKED_WOLF_MEAT, "Cooked Wolf Meat");
         builder.add(DETOXIFIED_FLESH, "Detoxified Flesh");
@@ -66,7 +66,7 @@ public class LangGenerator extends FabricLanguageProvider {
         builder.add(TOAST, "Toast");
         builder.add(RAW_WOLF_MEAT, "Raw Wolf Meat");
         builder.add(OMELET, "Omelet");
-        builder.add(RAW_CHICKEN_NUGGET, "Raw Chicken Nuggets");
+        builder.add(RAW_CHICKEN_NUGGETS, "Raw Chicken Nuggets");
         builder.add(CHEESE, "Cheese");
 
         // Tools, Weapons & Armor

@@ -73,7 +73,7 @@ public class SifterBlock extends Block implements BlockEntityProvider {
 
         blockEntity.animationStartTime = world.getTime();
         blockEntity.inUse = true;
-        blockEntity.storedResult = result.map(SiftingRecipe::getOutput).orElse(null);
+        blockEntity.storeResult(result.map(SiftingRecipe::getOutput).orElse(null), result.map(SiftingRecipe::chance).orElse(1f));
 
         blockEntity.markDirty();
 

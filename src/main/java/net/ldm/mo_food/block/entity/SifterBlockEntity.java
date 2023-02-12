@@ -21,7 +21,8 @@ public class SifterBlockEntity extends BlockEntity implements BasicInventory {
     private final DefaultedList<ItemStack> items = DefaultedList.ofSize(1, ItemStack.EMPTY);
     public long animationStartTime;
     public boolean inUse;
-    public ItemStack storedResult;
+    public ItemStack storedResultStack;
+    public float storedResultChance;
 
     public SifterBlockEntity(BlockPos pos, BlockState state) {
         super(MoFood.SIFTER_BLOCK_ENTITY, pos, state);
@@ -32,7 +33,8 @@ public class SifterBlockEntity extends BlockEntity implements BasicInventory {
         super.writeNbt(nbt);
         nbt.putLong("animationStartTime", animationStartTime);
         nbt.putBoolean("inUse", inUse);
-        nbt.putString("storedResult", LDMUtils.getItemID(storedResult));
+        nbt.putString("storedResult", LDMUtils.getItemID(storedResultStack));
+        nbt.putFloat("storedResultChance", storedResultChance);
         Inventories.writeNbt(nbt, items);
     }
 
@@ -41,20 +43,27 @@ public class SifterBlockEntity extends BlockEntity implements BasicInventory {
         super.readNbt(nbt);
         animationStartTime = nbt.getLong("animationStartTime");
         inUse = nbt.getBoolean("inUse");
-        storedResult = LDMUtils.getItemFromID(nbt.getString("storedResult")).asItem().getDefaultStack();
+        storedResultStack = LDMUtils.getItemOrNull(LDMUtils.getItemFromID(nbt.getString("storedResult")));
+        storedResultChance = nbt.getFloat("storedResultChance");
         Inventories.readNbt(nbt, items);
     }
 
     public static void tick(World world, BlockPos pos, SifterBlockEntity blockEntity) {
         if (world.getTime() - blockEntity.animationStartTime == 45) {
-            if (blockEntity.storedResult == null)
-                world.spawnEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), blockEntity.getStack(0).copy())); //spawn input item
+            if (blockEntity.storedResultStack == null)
+                world.spawnEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), blockEntity.getStack(0).copyWithCount(1))); //spawn input item
             else
-                world.spawnEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), blockEntity.storedResult.copy())); //spawn recipe result
+                world.spawnEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), blockEntity.storedResultStack.copy())); //spawn recipe result
 
             blockEntity.setStack(0, ItemStack.EMPTY);
             blockEntity.inUse = false;
+            blockEntity.markDirty();
         }
+    }
+
+    public void storeResult(ItemStack stack, float chance) {
+        storedResultStack = stack;
+        storedResultChance = chance;
     }
 
     @Nullable

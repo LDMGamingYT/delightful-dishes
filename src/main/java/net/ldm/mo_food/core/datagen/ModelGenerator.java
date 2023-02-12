@@ -47,7 +47,7 @@ public class ModelGenerator extends FabricModelProvider {
         generator.register(COOKED_BEEF_PATTY, Models.GENERATED);
         generator.register(COOKED_CALAMARI, Models.GENERATED);
         generator.register(COOKED_CAT_STEAK, Models.GENERATED);
-        generator.register(COOKED_CHICKEN_NUGGET, Models.GENERATED);
+        generator.register(COOKED_CHICKEN_NUGGETS, Models.GENERATED);
         generator.register(COOKED_HORSE_MEAT, Models.GENERATED);
         generator.register(COOKED_WOLF_MEAT, Models.GENERATED);
         generator.register(DETOXIFIED_FLESH, Models.GENERATED);
@@ -76,7 +76,7 @@ public class ModelGenerator extends FabricModelProvider {
         generator.register(TOAST, Models.GENERATED);
         generator.register(RAW_WOLF_MEAT, Models.GENERATED);
         generator.register(OMELET, Models.GENERATED);
-        generator.register(RAW_CHICKEN_NUGGET, Models.GENERATED);
+        generator.register(RAW_CHICKEN_NUGGETS, Models.GENERATED);
         generator.register(CHEESE, Models.GENERATED);
 
         generator.register(STONE_KNIFE, Models.GENERATED);

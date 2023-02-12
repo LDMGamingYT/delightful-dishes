@@ -29,7 +29,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         // Crafting
         // Food & Drinks
-        offerShapelessRecipe(exporter, RAW_CHICKEN_NUGGET, Items.CHICKEN, null, 4);
+        offerShapelessRecipe(exporter, RAW_CHICKEN_NUGGETS, Items.CHICKEN, null, 4);
         offerSurroundRecipe(exporter, ENCHANTED_MUFFIN, FOOD, GOLDEN_MUFFIN, Items.GOLD_INGOT);
         offerKnifeSlicingRecipe(exporter, GARLIC_BREADSTICKS, 4, FOOD, GARLIC_BREAD_SLICE);
         offerSurroundRecipe(exporter, GOLDEN_MUFFIN, FOOD, MUFFIN, Items.GOLD_NUGGET);
@@ -67,7 +67,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
         offerCooking(exporter, CURDLED_MILK_BOTTLE, BUTTER);
         offerCooking(exporter, RAW_CHEESE_PIZZA, CHEESE_PIZZA);
         offerCooking(exporter, RAW_PEPPERONI_PIZZA, PEPPERONI_PIZZA);
-        offerCooking(exporter, RAW_CHICKEN_NUGGET, COOKED_CHICKEN_NUGGET);
+        offerCooking(exporter, RAW_CHICKEN_NUGGETS, COOKED_CHICKEN_NUGGETS);
         offerCooking(exporter, Items.ROTTEN_FLESH, DETOXIFIED_FLESH, false, false, true, false);
         offerCooking(exporter, RAW_GARLIC_BREAD, BAKED_GARLIC_BREAD);
         offerCooking(exporter, RAW_HORSE_MEAT, COOKED_HORSE_MEAT);

@@ -17,7 +17,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
-public record SiftingRecipe(Ingredient ingredient, ItemStack result, Identifier id) implements Recipe<BasicInventory> {
+public record SiftingRecipe(Ingredient ingredient, ItemStack result, Identifier id, float chance) implements Recipe<BasicInventory> {
 
     @Override
     public boolean matches(BasicInventory inventory, World world) {
@@ -65,10 +65,11 @@ public record SiftingRecipe(Ingredient ingredient, ItemStack result, Identifier 
         String result;
         int min;
         int max;
+        float chance;
     }
 
     public static class Serializer implements RecipeSerializer<SiftingRecipe> {
-        private Serializer(){}
+        Serializer(){}
         public static final Serializer INSTANCE = new Serializer();
         public static final Identifier ID = new Identifier(MoFood.MOD_ID, "sifting");
 
@@ -81,20 +82,22 @@ public record SiftingRecipe(Ingredient ingredient, ItemStack result, Identifier 
 
             if (recipeJson.min == 0) recipeJson.min = 1;
             if (recipeJson.max == 0) recipeJson.max = recipeJson.min;
+            if (recipeJson.chance < 0 || recipeJson.chance > 1) recipeJson.chance = 1;
 
             Ingredient input = Ingredient.fromJson(recipeJson.ingredient);
             Item output = Registries.ITEM.getOrEmpty(new Identifier(recipeJson.result)).orElseThrow(() ->
                     new JsonSyntaxException(String.format("Item '%s' does not exist", recipeJson.result)));
+
             ItemStack outputStack = new ItemStack(output, Random.create().nextBetween(recipeJson.min, recipeJson.max));
 
-            return new SiftingRecipe(input, outputStack, id);
+            return new SiftingRecipe(input, outputStack, id, recipeJson.chance);
         }
 
         @Override
         public SiftingRecipe read(Identifier id, PacketByteBuf buf) {
             Ingredient input = Ingredient.fromPacket(buf);
             ItemStack output = buf.readItemStack();
-            return new SiftingRecipe(input, output, id);
+            return new SiftingRecipe(input, output, id, 1f);
         }
 
         @Override
