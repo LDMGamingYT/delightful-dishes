@@ -1,0 +1,10 @@
+{
+    "type": "mo_food:sifting",
+    "ingredient": {
+        "item": "minecraft:birch_leaves"
+    },
+    "result": "mo_food:olives",
+    "min": "1",
+    "max": "1",
+    "chance": "0.15"
+}
