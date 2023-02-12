@@ -16,11 +16,8 @@ public class ModelGenerator extends FabricModelProvider {
     @Override
     public void generateBlockStateModels( BlockStateModelGenerator generator ) {
         generator.registerSimpleCubeAll(GROUND_SALT_BLOCK);
-        //generator.register(PANCAKES_BLOCK_ITEM, Models.); //this one requires blockstate variants... //TODO: pancakes
         /*generator.registerCrop(LETTUCE_CROP, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
-        //TODO: cheese pizza
         generator.registerCrop(GARLIC_CROP, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
-        //TODO: pepperoni pizza
         generator.registerCrop(SWEET_POTATOES, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
         generator.registerCrop(TOMATOES, IntProperty.of("age", 0, 3));*/
     }
@@ -38,13 +35,13 @@ public class ModelGenerator extends FabricModelProvider {
         generator.register(BAKED_GARLIC_BREAD, Models.GENERATED);
         generator.register(BAKED_SWEET_POTATO, Models.GENERATED);
         generator.register(BANANA, Models.GENERATED);
-        generator.register(RAW_BEEF_PATTY, Models.GENERATED);
+        generator.register(MINCED_BEEF, Models.GENERATED);
         generator.register(BREADSTICKS, Models.GENERATED);
         generator.register(BUTTER, Models.GENERATED);
         generator.register(RAW_CALAMARI, Models.GENERATED);
         generator.register(RAW_CAT_STEAK, Models.GENERATED);
         generator.register(COOKED_BACON, Models.GENERATED);
-        generator.register(COOKED_BEEF_PATTY, Models.GENERATED);
+        generator.register(BEEF_PATTY, Models.GENERATED);
         generator.register(COOKED_CALAMARI, Models.GENERATED);
         generator.register(COOKED_CAT_STEAK, Models.GENERATED);
         generator.register(COOKED_CHICKEN_NUGGETS, Models.GENERATED);

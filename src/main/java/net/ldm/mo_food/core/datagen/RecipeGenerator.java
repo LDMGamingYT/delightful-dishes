@@ -34,7 +34,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
         offerKnifeSlicingRecipe(exporter, GARLIC_BREADSTICKS, 4, FOOD, GARLIC_BREAD_SLICE);
         offerSurroundRecipe(exporter, GOLDEN_MUFFIN, FOOD, MUFFIN, Items.GOLD_NUGGET);
         offerSingleOutputShapelessRecipe(exporter, LEMON, LEMON_JUICE, null);
-        offerMultipleShapelessRecipe(exporter, RAW_BEEF_PATTY, 1, FOOD, Items.BEEF, GROUND_SALT);
+        offerMultipleShapelessRecipe(exporter, MINCED_BEEF, 1, FOOD, Items.BEEF, GROUND_SALT);
         offerKnifeSlicingRecipe(exporter, BREADSTICKS, 4, FOOD, TOAST);
         offerMultipleShapelessRecipe(exporter, FRENCH_FRIES, 1, FOOD, OLIVE_OIL, Items.BAKED_POTATO, GROUND_SALT, Items.PAPER);
         offerMultipleShapelessRecipe(exporter, RAW_GARLIC_BREAD, 1, FOOD, GROUND_SALT, Items.BREAD, GARLIC);
@@ -60,7 +60,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
 
         // Smelting, etc.
         offerCooking(exporter, RAW_BACON, COOKED_BACON);
-        offerCooking(exporter, RAW_BEEF_PATTY, COOKED_BEEF_PATTY);
+        offerCooking(exporter, MINCED_BEEF, BEEF_PATTY);
         offerCooking(exporter, RAW_CALAMARI, COOKED_CALAMARI);
         offerCooking(exporter, RAW_CAT_STEAK, COOKED_CAT_STEAK);
         offerCooking(exporter, Items.MILK_BUCKET, CHEESE);

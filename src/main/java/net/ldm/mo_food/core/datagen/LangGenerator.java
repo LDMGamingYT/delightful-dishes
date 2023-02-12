@@ -28,13 +28,13 @@ public class LangGenerator extends FabricLanguageProvider {
         builder.add(BAKED_GARLIC_BREAD, "Baked Garlic Bread");
         builder.add(BAKED_SWEET_POTATO, "Baked Sweet Potato");
         builder.add(BANANA, "Banana");
-        builder.add(RAW_BEEF_PATTY, "Raw Beef Patty");
+        builder.add(MINCED_BEEF, "Raw Beef Patty");
         builder.add(BREADSTICKS, "Breadsticks");
         builder.add(BUTTER, "Butter");
         builder.add(RAW_CALAMARI, "Raw Calamari");
         builder.add(RAW_CAT_STEAK, "Raw Cat Steak");
         builder.add(COOKED_BACON, "Cooked Bacon");
-        builder.add(COOKED_BEEF_PATTY, "Cooked Beef Patty");
+        builder.add(BEEF_PATTY, "Cooked Beef Patty");
         builder.add(COOKED_CALAMARI, "Cooked Calamari");
         builder.add(COOKED_CAT_STEAK, "Cooked Cat Steak");
         builder.add(COOKED_CHICKEN_NUGGETS, "Cooked Chicken Nuggets");
