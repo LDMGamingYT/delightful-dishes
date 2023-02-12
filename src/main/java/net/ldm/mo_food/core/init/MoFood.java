@@ -74,8 +74,8 @@ public class MoFood implements ModInitializer {
     public static final Item FRENCH_FRIES = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "french_fries"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(6).saturationModifier(7.2f).build())));
     public static final Item LEMON_JUICE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lemon_juice"), new DrinkableItem(new FabricItemSettings()));
     public static final Item BUTTER = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "butter"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(4).saturationModifier(1.2f).build())));
-    public static final Item RAW_BEEF_PATTY = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "beef_patty"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(1.8f).build())));
-    public static final Item COOKED_BEEF_PATTY = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cooked_beef_patty"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(7).saturationModifier(11.4f).build())));
+    public static final Item MINCED_BEEF = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "minced_beef"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(3).saturationModifier(1.8f).build())));
+    public static final Item BEEF_PATTY = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "beef_patty"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(7).saturationModifier(11.4f).build())));
     public static final Item DETOXIFIED_FLESH = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "detoxified_flesh"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.25f).build())));
     public static final Block GARLIC_CROP = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "garlic"), new GarlicCrop(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
     public static final Item GARLIC = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic"), new BlockItem(GARLIC_CROP, (new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build())));
@@ -131,8 +131,8 @@ public class MoFood implements ModInitializer {
             entries.add(LEMON);
             entries.add(FRENCH_FRIES);
             entries.add(BUTTER);
-            entries.add(RAW_BEEF_PATTY);
-            entries.add(COOKED_BEEF_PATTY);
+            entries.add(MINCED_BEEF);
+            entries.add(BEEF_PATTY);
             entries.add(DETOXIFIED_FLESH);
             entries.add(RAW_GARLIC_BREAD);
             entries.add(BAKED_GARLIC_BREAD);
