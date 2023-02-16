@@ -58,7 +58,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
         offerKnifeRecipe(exporter, DIAMOND_KNIFE, Items.DIAMOND);
         offerNetheriteUpgradeRecipe(exporter, DIAMOND_KNIFE, COMBAT, NETHERITE_KNIFE);
 
-        // Smelting, etc.
+        // Smelting
         offerCooking(exporter, RAW_BACON, COOKED_BACON);
         offerCooking(exporter, MINCED_BEEF, BEEF_PATTY);
         offerCooking(exporter, RAW_CALAMARI, COOKED_CALAMARI);
