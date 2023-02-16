@@ -48,7 +48,6 @@ public class MoFood implements ModInitializer {
     public static final Item TOMATO = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "tomato"), new BlockItem(TOMATOES, (new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).build())));
     public static final Block LETTUCE_CROP = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "lettuce"), new LettuceCrop(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
     public static final Item LETTUCE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "lettuce"), new BlockItem(LETTUCE_CROP, (new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.2f).snack().build())));
-
     public static final Item PIZZA_DOUGH = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pizza_dough"), new Item(new FabricItemSettings()));
     public static final Item CHEESE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "cheese"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(5).saturationModifier(6.2f).build())));
     public static final Item PIZZA_BREAD = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "pizza_bread"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(8).saturationModifier(8.0f).build())));
