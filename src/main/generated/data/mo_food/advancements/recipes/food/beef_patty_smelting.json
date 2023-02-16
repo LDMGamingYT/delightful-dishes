@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_beef_patty": {
+    "has_minced_beef": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mo_food:beef_patty"
+              "mo_food:minced_beef"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cooked_beef_patty_smelting"
+        "recipe": "minecraft:beef_patty_smelting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_beef_patty",
+      "has_minced_beef",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cooked_beef_patty_smelting"
+      "minecraft:beef_patty_smelting"
     ]
   }
 }

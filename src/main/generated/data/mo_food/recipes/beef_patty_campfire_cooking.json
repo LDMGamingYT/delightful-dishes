@@ -3,9 +3,9 @@
   "category": "food",
   "cookingtime": 600,
   "experience": 0.35,
-  "group": "cooked_beef_patty",
+  "group": "beef_patty",
   "ingredient": {
-    "item": "mo_food:beef_patty"
+    "item": "mo_food:minced_beef"
   },
-  "result": "mo_food:cooked_beef_patty"
+  "result": "mo_food:beef_patty"
 }

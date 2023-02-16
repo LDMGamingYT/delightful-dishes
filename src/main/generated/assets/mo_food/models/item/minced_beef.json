@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mo_food:item/cooked_beef_patty"
+    "layer0": "mo_food:item/minced_beef"
   }
 }
