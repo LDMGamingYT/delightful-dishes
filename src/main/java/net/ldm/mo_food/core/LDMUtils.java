@@ -1,5 +1,9 @@
 package net.ldm.mo_food.core;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.item.FoodComponent;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -29,5 +33,39 @@ public class LDMUtils {
     public static ItemStack getItemOrNull(ItemConvertible item) {
         if (item == null) return null;
         else return item.asItem().getDefaultStack();
+    }
+
+    public static Item foodItem(int hunger, float saturation, boolean isMeat, boolean isSnack, FoodEffect... effects) {
+        FoodComponent.Builder builder = new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation);
+        if (isSnack) builder.snack();
+        if (isMeat) builder.meat();
+
+        for (FoodEffect effect: effects) {
+            builder.statusEffect(effect.instance, effect.chance);
+        }
+
+        return new Item(new FabricItemSettings().food(builder.build()));
+    }
+
+    public static Item foodItem(int hunger, float saturation, boolean isMeat, boolean isSnack) {
+        FoodComponent.Builder builder = new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation);
+        if (isSnack) builder.snack();
+        if (isMeat) builder.meat();
+        return new Item(new FabricItemSettings().food(builder.build()));
+    }
+
+    public static Item foodItem(int hunger, float saturation, boolean isMeat) {
+        return foodItem(hunger, saturation, isMeat, false);
+    }
+
+    public static Item foodItem(int hunger, float saturation) {
+        return foodItem(hunger, saturation, false, false);
+    }
+
+    public static FabricItemSettings foodItemSettings(int hunger, float saturation) {
+        return new FabricItemSettings().food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation).build());
+    }
+
+    record FoodEffect(StatusEffectInstance instance, float chance) {
     }
 }
