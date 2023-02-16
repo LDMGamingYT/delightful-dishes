@@ -85,6 +85,9 @@ public class MoFood implements ModInitializer {
     public static final Item BREADSTICKS = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "breadsticks"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.5f).build())));
     public static final Item GARLIC_BREADSTICKS = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "garlic_breadsticks"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.8f).build())));
     public static final Item BANANA = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "banana"), new Item((new FabricItemSettings()).food(new FoodComponent.Builder().hunger(4).saturationModifier(2.8f).build())));
+    // TODO: 2023-02-15 Add corn
+    // TODO: 2023-02-15 Add bell peppers
+    // NOTE: 2023-02-15 Textures already exist
 
     public static final SwordItem STONE_KNIFE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "stone_knife"), new SwordItem(ToolMaterials.STONE, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.STONE_KNIFE)));
     public static final SwordItem IRON_KNIFE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "iron_knife"), new SwordItem(ToolMaterials.IRON, 1, -2.0f, (new FabricItemSettings()).recipeRemainder(MoFood.IRON_KNIFE)));
