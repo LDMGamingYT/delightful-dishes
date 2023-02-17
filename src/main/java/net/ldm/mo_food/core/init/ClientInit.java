@@ -25,8 +25,8 @@ public class ClientInit implements ClientModInitializer {
         BlockEntityRendererFactories.register(SIFTER_BLOCK_ENTITY, SifterBlockEntityRenderer::new);
 
         ModelPredicateProviderRegistry.register(CORN, new Identifier("bites"), (itemStack, clientWorld, livingEntity, number) -> {
-            if (livingEntity == null || livingEntity.getActiveItem() != itemStack) return 0.0f;
-            return itemStack.getNbt() != null ? itemStack.getNbt().getFloat("bites") : 0.0f;
+            if (livingEntity == null) return 0.0f;
+            return itemStack.getOrCreateNbt().getFloat("bites") / 10;
         });
     }
 }
