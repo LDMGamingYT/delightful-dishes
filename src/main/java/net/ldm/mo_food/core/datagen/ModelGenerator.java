@@ -31,7 +31,7 @@ public class ModelGenerator extends FabricModelProvider {
         generator.register(DIAMOND_KNIFE, Models.GENERATED);
         generator.register(NETHERITE_KNIFE, Models.GENERATED);
 
-        for (Item item: dataGenItems) {
+        for (Item item: ITEM_MODEL_DATAGEN) {
             generator.register(item, Models.GENERATED);
         }
     }

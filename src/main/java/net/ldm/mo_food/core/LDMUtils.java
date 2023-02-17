@@ -47,6 +47,26 @@ public class LDMUtils {
         return new Item(new FabricItemSettings().food(builder.build()));
     }
 
+    public static Item foodItem(int hunger, float saturation, FoodEffect... effects) {
+        return foodItem(hunger, saturation, false, false, effects);
+    }
+
+    public static Item foodItem(int hunger, float saturation, boolean isMeat, boolean isSnack, StatusEffectInstance... effects) {
+        FoodComponent.Builder builder = new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation);
+        if (isSnack) builder.snack();
+        if (isMeat) builder.meat();
+
+        for (StatusEffectInstance instance: effects) {
+            builder.statusEffect(instance, 1.0f);
+        }
+
+        return new Item(new FabricItemSettings().food(builder.build()));
+    }
+
+    public static Item foodItem(int hunger, float saturation, StatusEffectInstance... effects) {
+        return foodItem(hunger, saturation, false, false, effects);
+    }
+
     public static Item foodItem(int hunger, float saturation, boolean isMeat, boolean isSnack) {
         FoodComponent.Builder builder = new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation);
         if (isSnack) builder.snack();
@@ -66,6 +86,6 @@ public class LDMUtils {
         return new FabricItemSettings().food(new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation).build());
     }
 
-    record FoodEffect(StatusEffectInstance instance, float chance) {
+    public record FoodEffect(StatusEffectInstance instance, float chance) {
     }
 }
