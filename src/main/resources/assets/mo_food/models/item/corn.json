@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mo_food:item/corn"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "bites": 0
+      },
+      "model": "tutorial:item/corn_0"
+    },
+    {
+      "predicate": {
+        "bites": 1
+      },
+      "model": "tutorial:item/corn_1"
+    },
+    {
+      "predicate": {
+        "bites": 2
+      },
+      "model": "tutorial:item/corn_2"
+    },
+    {
+      "predicate": {
+        "bites": 3
+      },
+      "model": "tutorial:item/corn_3"
+    }
+  ]
+}

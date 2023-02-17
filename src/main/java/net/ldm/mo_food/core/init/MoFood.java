@@ -68,7 +68,7 @@ public class MoFood implements ModInitializer {
     public static final Item COOKED_CHICKEN_NUGGETS = registerWithDatagen("cooked_chicken_nuggets", foodItem(2, 0.3f, false, true), true);
     public static final Item COOKED_HORSE_MEAT = registerWithDatagen("cooked_horse_meat", LDMUtils.foodItem(8, 12.8f, true), true);
     public static final Item COOKED_WOLF_MEAT = registerWithDatagen("cooked_wolf_meat", foodItem(6, 9.6f, true), true);
-    public static final Item CORN = registerWithDatagen("corn", new Item(foodItemSettings(4, 2.4f).maxCount(1)), true);
+    public static final Item CORN = register(Registries.ITEM, "corn", new Item(foodItemSettings(4, 2.4f).maxCount(1)), true);
     public static final Item CURDLED_MILK_BOTTLE = registerWithDatagen("curdled_milk_bottle", new DrinkableItem(new FabricItemSettings()), true);
     public static final Item DETOXIFIED_FLESH = registerWithDatagen("detoxified_flesh", foodItem(1, 0.25f), true);
     public static final Item ENCHANTED_MUFFIN = registerWithDatagen("enchanted_golden_muffin", new ShinyItem(new FabricItemSettings().rarity(Rarity.RARE)
@@ -125,7 +125,6 @@ public class MoFood implements ModInitializer {
     private static Item registerWithDatagen(String id, Item entry, boolean genLang) {
         Item registryInstance = register(Registries.ITEM, id, entry, genLang);
         ITEM_MODEL_DATAGEN.add(registryInstance);
-        //if (genLang) langDatagen.add(registryInstance);
         return registryInstance;
     }
 
