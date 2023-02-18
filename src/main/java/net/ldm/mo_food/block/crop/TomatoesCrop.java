@@ -40,7 +40,7 @@ public class TomatoesCrop extends PlantBlock implements Fertilizable {
 
     @Environment(EnvType.CLIENT)
     public ItemStack getPickStack( BlockView world, BlockPos pos, BlockState state ) {
-        return new ItemStack(MoFood.TOMATOES);
+        return new ItemStack(MoFood.TOMATO_BUSH);
     }
 
     @Override
@@ -87,7 +87,7 @@ public class TomatoesCrop extends PlantBlock implements Fertilizable {
             return ActionResult.PASS;
         } else if (i > 1) {
             int j = 1 + world.random.nextInt(2);
-            dropStack(world, pos, new ItemStack(MoFood.TOMATOES, j + (bl ? 1 : 0)));
+            dropStack(world, pos, new ItemStack(MoFood.TOMATO_BUSH, j + (bl ? 1 : 0)));
             world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             world.setBlockState(pos, state.with(AGE, 1), 2);
             return ActionResult.success(world.isClient);
