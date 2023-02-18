@@ -17,10 +17,10 @@ public class ModelGenerator extends FabricModelProvider {
     @Override
     public void generateBlockStateModels( BlockStateModelGenerator generator ) {
         generator.registerSimpleCubeAll(GROUND_SALT_BLOCK);
-        /*generator.registerCrop(LETTUCE_CROP, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
-        generator.registerCrop(GARLIC_CROP, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
-        generator.registerCrop(SWEET_POTATOES, IntProperty.of("age", 0, 7), 0, 1, 2, 3);
-        generator.registerCrop(TOMATOES, IntProperty.of("age", 0, 3));*/
+        /*generator.registerCrop(LETTUCE_CROP, BasicCrops.Lettuce.AGE, 0, 1, 2, 3);
+        generator.registerCrop(GARLIC_CROP, BasicCrops.Garlic.AGE, 0, 1, 2, 3);
+        generator.registerCrop(SWEET_POTATOES, BasicCrops.SweetPotatoes.AGE, 0, 1, 2, 3);
+        generator.registerCrop(TOMATOES, TomatoesCrop.AGE);*/
     }
 
     @Override

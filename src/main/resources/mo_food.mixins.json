@@ -1,13 +1,11 @@
 {
-  "required": false,
-  "minVersion": "0.8",
-  "package": "",
-  "compatibilityLevel": "JAVA_8",
-  "mixins": [
-  ],
-  "client": [
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+    "required": false,
+    "minVersion": "0.8",
+    "package": "",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [],
+    "client": [],
+    "injectors": {
+        "defaultRequire": 1
+    }
 }

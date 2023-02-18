@@ -1,5 +1,6 @@
 {
   "block.mo_food.cheese_pizza": "Cheese Pizza",
+  "block.mo_food.corn": "Corn",
   "block.mo_food.garlic": "Garlic",
   "block.mo_food.ground_salt_block": "Block of Ground Salt",
   "block.mo_food.lettuce": "Lettuce",
@@ -25,7 +26,6 @@
   "item.mo_food.cooked_chicken_nuggets": "Cooked Chicken Nuggets",
   "item.mo_food.cooked_horse_meat": "Cooked Horse Meat",
   "item.mo_food.cooked_wolf_meat": "Cooked Wolf Meat",
-  "item.mo_food.corn": "Corn",
   "item.mo_food.curdled_milk_bottle": "Curdled Milk Bottle",
   "item.mo_food.detoxified_flesh": "Detoxified Flesh",
   "item.mo_food.diamond_knife": "Diamond Knife",
