@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "mo_food:block/potatoes_stage2"
+    "crop": "mo_food:block/lettuce_stage1"
   }
 }
