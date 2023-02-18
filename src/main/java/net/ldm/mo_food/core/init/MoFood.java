@@ -9,10 +9,7 @@ import net.ldm.mo_food.block.CheesePizza;
 import net.ldm.mo_food.block.PancakesBlock;
 import net.ldm.mo_food.block.PepperoniPizza;
 import net.ldm.mo_food.block.SifterBlock;
-import net.ldm.mo_food.block.crop.GarlicCrop;
-import net.ldm.mo_food.block.crop.LettuceCrop;
-import net.ldm.mo_food.block.crop.SweetPotatoesCrop;
-import net.ldm.mo_food.block.crop.TomatoesCrop;
+import net.ldm.mo_food.block.crop.*;
 import net.ldm.mo_food.block.entity.SifterBlockEntity;
 import net.ldm.mo_food.core.LDMUtils;
 import net.ldm.mo_food.item.CornItem;
@@ -41,13 +38,14 @@ public class MoFood implements ModInitializer {
     public static final ArrayList<ItemConvertible> LANG_DATAGEN = new ArrayList<>();
     public static final String MOD_ID = "mo_food";
 
+    public static final Block CORN_CROP = register(Registries.BLOCK, "corn", new CornCrop(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), true);
     public static final Block CHEESE_PIZZA = register(Registries.BLOCK, "cheese_pizza", new CheesePizza(FabricBlockSettings.of(Material.CAKE).strength(0.5F).noCollision().sounds(BlockSoundGroup.WOOL)), true);
-    public static final Block GARLIC_CROP = register(Registries.BLOCK, "garlic", new GarlicCrop(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), true);
+    public static final Block GARLIC_CROP = register(Registries.BLOCK, "garlic", new BasicCrops.Garlic(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), true);
     public static final Block GROUND_SALT_BLOCK = register(Registries.BLOCK, "ground_salt_block", new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND)));
-    public static final Block LETTUCE_CROP = register(Registries.BLOCK, "lettuce", new LettuceCrop(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), true);
+    public static final Block LETTUCE_CROP = register(Registries.BLOCK, "lettuce", new BasicCrops.Lettuce(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), true);
     public static final Block PANCAKES = register(Registries.BLOCK, "pancakes", new PancakesBlock(FabricBlockSettings.of(Material.CAKE).strength(0.5F).sounds(BlockSoundGroup.WOOL)), true);
     public static final Block PEPPERONI_PIZZA = register(Registries.BLOCK, "pepperoni_pizza", new PepperoniPizza(FabricBlockSettings.of(Material.CAKE).strength(0.5F).noCollision().sounds(BlockSoundGroup.WOOL)), true);
-    public static final Block SWEET_POTATOES = register(Registries.BLOCK, "sweet_potatoes", new SweetPotatoesCrop(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), true);
+    public static final Block SWEET_POTATOES = register(Registries.BLOCK, "sweet_potatoes", new BasicCrops.SweetPotatoes(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), true);
     public static final Block TOMATOES = register(Registries.BLOCK, "tomatoes", new TomatoesCrop(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)), true);
     public static final BlockItem GROUND_SALT_BLOCK_ITEM = register(Registries.ITEM, "ground_salt_block", new BlockItem(GROUND_SALT_BLOCK, new FabricItemSettings()));
     public static final BlockItem PANCAKES_BLOCK_ITEM = register(Registries.ITEM, "pancakes", new BlockItem(PANCAKES, new FabricItemSettings()));
@@ -69,7 +67,7 @@ public class MoFood implements ModInitializer {
     public static final Item COOKED_CHICKEN_NUGGETS = registerWithDatagen("cooked_chicken_nuggets", foodItem(2, 0.3f, false, true), true);
     public static final Item COOKED_HORSE_MEAT = registerWithDatagen("cooked_horse_meat", LDMUtils.foodItem(8, 12.8f, true), true);
     public static final Item COOKED_WOLF_MEAT = registerWithDatagen("cooked_wolf_meat", foodItem(6, 9.6f, true), true);
-    public static final Item CORN = register(Registries.ITEM, "corn", new CornItem(foodItemSettings(4, 2.4f).maxCount(1)), true);
+    public static final Item CORN = register(Registries.ITEM, "corn", new CornItem(foodItemSettings(4, 2.4f).maxCount(1)));
     public static final Item CURDLED_MILK_BOTTLE = registerWithDatagen("curdled_milk_bottle", new DrinkableItem(new FabricItemSettings()), true);
     public static final Item DETOXIFIED_FLESH = registerWithDatagen("detoxified_flesh", foodItem(1, 0.25f), true);
     public static final Item ENCHANTED_MUFFIN = registerWithDatagen("enchanted_golden_muffin", new ShinyItem(new FabricItemSettings().rarity(Rarity.RARE)

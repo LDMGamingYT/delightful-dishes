@@ -1,8 +1,9 @@
 package net.ldm.mo_food.item;
 
+import net.ldm.mo_food.core.init.MoFood;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Hand;
@@ -11,9 +12,10 @@ import net.minecraft.world.World;
 
 import java.util.Objects;
 
-public class CornItem extends Item {
+public class CornItem extends BlockItem {
+
     public CornItem(Settings settings) {
-        super(settings);
+        super(MoFood.CORN_CROP, settings);
     }
 
     @Override
