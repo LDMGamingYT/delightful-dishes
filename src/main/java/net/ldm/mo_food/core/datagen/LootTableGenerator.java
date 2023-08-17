@@ -1,23 +1,19 @@
 package net.ldm.mo_food.core.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableProvider;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.context.LootContextTypes;
-import net.minecraft.util.Identifier;
-
-import java.util.function.BiConsumer;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.ldm.mo_food.core.init.MoFood;
 
 public class LootTableGenerator {
-    public static class Blocks extends SimpleFabricLootTableProvider {
-
+    public static class Blocks extends FabricBlockLootTableProvider {
         public Blocks(FabricDataOutput output) {
-            super(output, LootContextTypes.BLOCK);
+            super(output);
         }
 
         @Override
-        public void accept(BiConsumer<Identifier, LootTable.Builder> consumer) {
-            //consumer.accept(LDMUtils.newId("garlic"), .drops(MoFood.GARLIC));
+        public void generate() {
+            addDrop(MoFood.GROUND_SALT_BLOCK, drops(MoFood.GROUND_SALT_BLOCK_ITEM));
+            addDrop(MoFood.SIFTER, drops(MoFood.SIFTER_BLOCK_ITEM));
         }
     }
 }
