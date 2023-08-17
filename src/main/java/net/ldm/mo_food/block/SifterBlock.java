@@ -51,7 +51,6 @@ public class SifterBlock extends Block implements BlockEntityProvider {
     public ActionResult onUse( BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit ) {
         if (world.isClient) return ActionResult.SUCCESS;
         if (!(world.getBlockEntity(pos) instanceof SifterBlockEntity blockEntity)) return ActionResult.SUCCESS;
-
         if (blockEntity.inUse) return ActionResult.SUCCESS;
 
         ItemStack playerStack = player.getStackInHand(hand);
