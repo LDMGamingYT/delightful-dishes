@@ -1,7 +1,6 @@
 package net.ldm.mo_food.core;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.ldm.mo_food.core.init.MoFood;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
@@ -88,9 +87,5 @@ public class LDMUtils {
     }
 
     public record FoodEffect(StatusEffectInstance instance, float chance) {
-    }
-
-    public static Identifier newId(String path) {
-        return new Identifier(MoFood.MOD_ID, path);
     }
 }
