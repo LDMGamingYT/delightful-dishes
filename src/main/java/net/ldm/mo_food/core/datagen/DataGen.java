@@ -12,4 +12,17 @@ public class DataGen implements DataGeneratorEntrypoint {
         pack.addProvider(RecipeGenerator::new);
         pack.addProvider(LootTableGenerator.Blocks::new);
     }
+
+    /*
+     * Completed data-gen:
+     * Lang (auto)
+     * Item models
+     * Block models
+     * Recipes
+     * Block loot tables (not crops)
+     *
+     * TODO:
+     *  Crop block models and loot tables
+     *
+     */
 }
