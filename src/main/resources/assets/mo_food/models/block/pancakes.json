@@ -1,21 +1,23 @@
 {
-    "textures": {
-        "particle": "mo_food:block/pancakes_side",
-        "bottom": "mo_food:block/pancakes_bottom",
-        "top": "mo_food:block/pancakes_top",
-        "side": "mo_food:block/pancakes_side"
-    },
-    "elements": [
-        {   "from": [ 1, 0, 1 ],
-            "to": [ 15, 8, 15 ],
-            "faces": {
-                "down":  { "texture": "#bottom", "cullface": "down" },
-                "up":    { "texture": "#top" },
-                "north": { "texture": "#side" },
-                "south": { "texture": "#side" },
-                "west":  { "texture": "#side" },
-                "east":  { "texture": "#side" }
-            }
-        }
-    ]
+	"parent": "block/block",
+	"textures": {
+		"bottom": "mo_food:block/pancakes_bottom",
+		"top": "mo_food:block/pancakes_top",
+		"particle": "mo_food:block/pancakes_side",
+		"side": "mo_food:block/pancakes_side"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [15, 8, 15],
+			"faces": {
+				"north": {"uv": [1, 8, 15, 16], "texture": "#side"},
+				"east": {"uv": [1, 8, 15, 16], "texture": "#side"},
+				"south": {"uv": [1, 8, 15, 16], "texture": "#side"},
+				"west": {"uv": [1, 8, 15, 16], "texture": "#side"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#top"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#bottom", "cullface": "down"}
+			}
+		}
+	]
 }
