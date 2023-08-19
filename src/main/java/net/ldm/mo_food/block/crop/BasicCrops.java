@@ -10,7 +10,6 @@ public class BasicCrops {
     }
 
     public static class Lettuce extends BasicCrop {
-
         public Lettuce(Settings settings ) {
             super(settings, MoFood.LETTUCE);
         }
