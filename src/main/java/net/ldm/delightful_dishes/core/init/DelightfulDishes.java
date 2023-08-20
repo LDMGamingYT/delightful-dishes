@@ -5,10 +5,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.ldm.delightful_dishes.block.CheesePizza;
-import net.ldm.delightful_dishes.block.PancakesBlock;
-import net.ldm.delightful_dishes.block.PepperoniPizza;
-import net.ldm.delightful_dishes.block.SifterBlock;
+import net.ldm.delightful_dishes.block.*;
 import net.ldm.delightful_dishes.block.crop.BasicCrops;
 import net.ldm.delightful_dishes.block.crop.CornCrop;
 import net.ldm.delightful_dishes.block.crop.TomatoesCrop;
@@ -123,6 +120,9 @@ public class DelightfulDishes implements ModInitializer {
     public static final Item SIFTER_BLOCK_ITEM = register(Registries.ITEM, "sifter", new BlockItem(SIFTER, new FabricItemSettings()));
     public static final BlockEntityType<SifterBlockEntity> SIFTER_BLOCK_ENTITY = register(Registries.BLOCK_ENTITY_TYPE, "sifter_block_entity", FabricBlockEntityTypeBuilder.create(SifterBlockEntity::new, SIFTER).build());
 
+    public static final Block COOKTOP = register(Registries.BLOCK, "cooktop", new CooktopBlock(FabricBlockSettings.of(Material.METAL).strength(5f, 6f).sounds(BlockSoundGroup.METAL)), true);
+    public static final Item COOKTOP_BLOCK_ITEM = register(Registries.ITEM, "cooktop", new BlockItem(COOKTOP, new FabricItemSettings()));
+
     private static Item registerWithDatagen(String id, Item entry, boolean genLang) {
         Item registryInstance = register(Registries.ITEM, id, entry, genLang);
         ITEM_MODEL_DATAGEN.add(registryInstance);
@@ -211,7 +211,10 @@ public class DelightfulDishes implements ModInitializer {
             entries.add(NETHERITE_KNIFE);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(GROUND_SALT_BLOCK_ITEM));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> entries.add(SIFTER_BLOCK_ITEM));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+            entries.add(SIFTER_BLOCK_ITEM);
+            entries.add(COOKTOP_BLOCK_ITEM);
+        });
 
         Registry.register(Registries.RECIPE_SERIALIZER, SiftingRecipe.Serializer.ID, SiftingRecipe.Serializer.INSTANCE);
         Registry.register(Registries.RECIPE_TYPE, new Identifier(MOD_ID, SiftingRecipe.Type.ID), SiftingRecipe.Type.INSTANCE);
