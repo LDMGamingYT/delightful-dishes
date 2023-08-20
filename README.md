@@ -1,13 +1,19 @@
-## **⚠️ THIS MOD HAS BEEN ABANDONED, THERE WILL BE NO FUTURE UPDATES** **⚠️**
+# Delightful Dishes
 
-### **This is a FABRIC mod. It will NOT work with forge**
+## This mod is still heavily in progress. Things are subject to change.
+
+#### Suggest what you want to see with this mod in the [Discord](https://discord.gg/GsUqxzj) server!
+
+***This description is out-of-date.***
 
 ### What do you get when you mix Food and Vanilla Crafting?
 
 #### This mod! It stays true to vanilla crafting while adding many new food items to the game!
 
-##### Enjoy plenty of crops, foods, ores, to yourself, or share it with friends on multiplayer!
+##### Enjoy plenty of crops, foods, and ores, to yourself, or share it with friends on multiplayer!
 
-<img src="https://i.imgur.com/t8bqzi8.png" alt="All food items in this mod." width="500px"/>
+![All food items in this mod.](https://i.imgur.com/t8bqzi8.png)
 
-##### **THIS MOD IS IN ALPHA. SOME BUGS MAY BE PRESENT.**
+#### **Questions? Suggestions? Just want to chat? Join the [discord](https://discord.gg/GsUqxzj "Discord Invite").**
+
+[![](https://i.imgur.com/2Hl3iZu.png)](https://discord.gg/GsUqxzj "Discord Invite")
