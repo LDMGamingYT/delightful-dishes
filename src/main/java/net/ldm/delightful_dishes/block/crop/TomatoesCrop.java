@@ -29,7 +29,7 @@ import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.NotNull;
 @SuppressWarnings("deprecation")
 public class TomatoesCrop extends PlantBlock implements Fertilizable {
-    public static IntProperty AGE;
+    public static final IntProperty AGE;
     private static final VoxelShape SMALL_SHAPE;
     private static final VoxelShape LARGE_SHAPE;
 
