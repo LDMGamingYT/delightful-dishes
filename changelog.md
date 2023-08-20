@@ -1,12 +1,16 @@
 # Changelog
 
-### v1.0 (1.19.3)
+### v0.1.0 (1.19.3) (Fabric)
 
-##### *The mod is no longer abandoned! Hooray!*
+##### This version has re-branded the mod from "More Food" to "Delightful Dishes". Alpha versions will not work with this and future versions.
+
+
 
 * Added: Sifter
+* Added: You can now sift leaves to get their items (fruits, sticks, saplings)
 * Removed: Salt ore
 * Changed: Salt is now obtained by sifting dirt, as salt ore has been removed
+* Changed: Flour is now obtained by sifting wheat
 * Changed: As of the new creative inventory sorting, all items have been moved to their appropriate tab
 * Changed: Lemon Juice is now drinkable
 * Changed: Milk bottles are now drinkable
