@@ -1,0 +1,200 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"dials": "block/gray_concrete",
+		"particle": "block/anvil",
+		"grates": "block/anvil",
+		"body": "block/iron_block"
+	},
+	"elements": [
+		{
+			"from": [5.375, 0, 3.625],
+			"to": [10.375, 0.25, 8.625],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.875, 0.3125, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 4.8, 0.25], "texture": "#grates"},
+				"east": {"uv": [0, 0, 4.9, 0.25], "texture": "#grates"},
+				"south": {"uv": [0, 0, 4.8, 0.25], "texture": "#grates"},
+				"west": {"uv": [0, 0, 4.9, 0.25], "texture": "#grates"},
+				"up": {"uv": [0, 0, 4.9, 4.8], "rotation": 270, "texture": "#grates"},
+				"down": {"uv": [0, 0, 4.9, 4.8], "rotation": 90, "texture": "#grates"}
+			}
+		},
+		{
+			"name": "wall",
+			"from": [10.375, 0.25, 3.625],
+			"to": [10.875, 0.75, 8.625],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.875, 0.3125, 8]},
+			"faces": {
+				"north": {"uv": [1, 2, 1.5, 2.75], "texture": "#grates"},
+				"east": {"uv": [1, 2, 5.5, 2.75], "texture": "#grates"},
+				"south": {"uv": [1, 2, 1.5, 2.75], "texture": "#grates"},
+				"west": {"uv": [1, 2, 5.5, 2.75], "texture": "#grates"},
+				"up": {"uv": [1, 2, 5.5, 2.5], "rotation": 270, "texture": "#grates"},
+				"down": {"uv": [1, 2, 5.5, 2.5], "rotation": 90, "texture": "#grates"}
+			}
+		},
+		{
+			"name": "wall",
+			"from": [4.875, 0.25, 3.625],
+			"to": [5.375, 0.75, 8.625],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.875, 0.3125, 8]},
+			"faces": {
+				"north": {"uv": [6, 2, 6.5, 2.75], "texture": "#grates"},
+				"east": {"uv": [6, 2, 10.5, 2.75], "texture": "#grates"},
+				"south": {"uv": [6, 2, 6.5, 2.75], "texture": "#grates"},
+				"west": {"uv": [6, 2, 10.5, 2.75], "texture": "#grates"},
+				"up": {"uv": [6, 2, 10.5, 2.5], "rotation": 270, "texture": "#grates"},
+				"down": {"uv": [6, 2, 10.5, 2.5], "rotation": 90, "texture": "#grates"}
+			}
+		},
+		{
+			"name": "wall",
+			"from": [5.375, 0.25, 3.125],
+			"to": [10.375, 0.75, 3.625],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.875, 0.3125, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 5, 0.5], "texture": "#grates"},
+				"east": {"uv": [0, 0, 0.5, 0.5], "texture": "#grates"},
+				"south": {"uv": [0, 0, 5, 0.5], "texture": "#grates"},
+				"west": {"uv": [0, 0, 0.5, 0.5], "texture": "#grates"},
+				"up": {"uv": [0, 0, 5, 0.5], "texture": "#grates"},
+				"down": {"uv": [0, 0, 5, 0.5], "texture": "#grates"}
+			}
+		},
+		{
+			"name": "wall",
+			"from": [5.375, 0.25, 8.625],
+			"to": [10.375, 0.75, 9.125],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.875, 0.3125, 8]},
+			"faces": {
+				"north": {"uv": [3, 2, 7.5, 2.75], "texture": "#grates"},
+				"east": {"uv": [3, 2, 3.5, 2.75], "texture": "#grates"},
+				"south": {"uv": [3, 2, 7.5, 2.75], "texture": "#grates"},
+				"west": {"uv": [3, 2, 3.5, 2.75], "texture": "#grates"},
+				"up": {"uv": [3, 2, 7.5, 2.5], "texture": "#grates"},
+				"down": {"uv": [3, 2, 7.5, 2.5], "texture": "#grates"}
+			}
+		},
+		{
+			"name": "handle",
+			"from": [7.25, 0.1, 9.75],
+			"to": [8.25, 0.65, 11.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.875, 0.3125, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 0.55], "texture": "#dials"},
+				"east": {"uv": [0, 0, 2, 0.55], "texture": "#dials"},
+				"south": {"uv": [0, 0, 1, 0.55], "texture": "#dials"},
+				"west": {"uv": [0, 0, 2, 0.55], "texture": "#dials"},
+				"up": {"uv": [0, 0, 1, 2], "texture": "#dials"},
+				"down": {"uv": [0, 0, 1, 2], "texture": "#dials"}
+			}
+		},
+		{
+			"name": "handle",
+			"from": [8, 0.1, 11.75],
+			"to": [8.25, 0.65, 12.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.875, 0.3125, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.25, 0.55], "texture": "#dials"},
+				"east": {"uv": [0, 0, 1, 0.55], "texture": "#dials"},
+				"south": {"uv": [0, 0, 0.25, 0.55], "texture": "#dials"},
+				"west": {"uv": [0, 0, 1, 0.55], "texture": "#dials"},
+				"up": {"uv": [0, 0, 0.25, 1], "texture": "#dials"},
+				"down": {"uv": [0, 0, 0.25, 1], "texture": "#dials"}
+			}
+		},
+		{
+			"name": "handle",
+			"from": [7.5, 0.1, 12.5],
+			"to": [8, 0.65, 12.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.875, 0.3125, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.5, 0.55], "texture": "#dials"},
+				"east": {"uv": [0, 0, 0.25, 0.55], "texture": "#dials"},
+				"south": {"uv": [0, 0, 0.5, 0.55], "texture": "#dials"},
+				"west": {"uv": [0, 0, 0.25, 0.55], "texture": "#dials"},
+				"up": {"uv": [0, 0, 0.5, 0.25], "texture": "#dials"},
+				"down": {"uv": [0, 0, 0.5, 0.25], "texture": "#dials"}
+			}
+		},
+		{
+			"name": "handle",
+			"from": [7.25, 0.1, 11.75],
+			"to": [7.5, 0.65, 12.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.875, 0.3125, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.25, 0.55], "texture": "#dials"},
+				"east": {"uv": [0, 0, 1, 0.55], "texture": "#dials"},
+				"south": {"uv": [0, 0, 0.25, 0.55], "texture": "#dials"},
+				"west": {"uv": [0, 0, 1, 0.55], "texture": "#dials"},
+				"up": {"uv": [0, 0, 0.25, 1], "texture": "#dials"},
+				"down": {"uv": [0, 0, 0.25, 1], "texture": "#dials"}
+			}
+		},
+		{
+			"name": "metal",
+			"from": [7.35, 0.2, 9],
+			"to": [8.15, 0.55, 9.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.875, 0.3125, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.8, 0.35], "texture": "#body"},
+				"east": {"uv": [0, 0, 0.75, 0.35], "texture": "#body"},
+				"south": {"uv": [0, 0, 0.8, 0.35], "texture": "#body"},
+				"west": {"uv": [0, 0, 0.75, 0.35], "texture": "#body"},
+				"up": {"uv": [0, 0, 0.8, 0.75], "texture": "#body"},
+				"down": {"uv": [0, 0, 0.8, 0.75], "texture": "#body"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [110, 0, 90],
+			"translation": [-7.75, 4, 2.75]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [110, 0, 90],
+			"translation": [-7.75, 4, 2.75]
+		},
+		"firstperson_righthand": {
+			"rotation": [90, -12, 90],
+			"translation": [-6.5, 5, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [90, -12, 90],
+			"translation": [-6.5, 5, 0]
+		},
+		"ground": {
+			"translation": [0, 10, 0]
+		},
+		"gui": {
+			"rotation": [90, -51, 35],
+			"translation": [-4.25, 3.75, -11],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"head": {
+			"rotation": [-90, 0, 180],
+			"translation": [0, 0.5, 2.75],
+			"scale": [1.25, 1.25, 1.25]
+		},
+		"fixed": {
+			"rotation": [90, 0, 180],
+			"translation": [0, 0, -11],
+			"scale": [1.5, 1.5, 1.5]
+		}
+	},
+	"groups": [
+		0,
+		1,
+		2,
+		3,
+		4,
+		{
+			"name": "handle",
+			"origin": [4, 6.375, 4.875],
+			"color": 0,
+			"children": [5, 6, 7, 8, 9]
+		}
+	]
+}
