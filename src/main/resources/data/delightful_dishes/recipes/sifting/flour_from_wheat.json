@@ -1,0 +1,10 @@
+{
+  "type": "delightful_dishes:sifting",
+  "ingredient": {
+    "item": "minecraft:wheat"
+  },
+  "result": "delightful_dishes:flour",
+  "min": "1",
+  "max": "2",
+  "chance": "1.0"
+}

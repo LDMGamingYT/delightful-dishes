@@ -48,7 +48,6 @@ public class RecipeGenerator extends FabricRecipeProvider {
         offerKnifeSlicingRecipe(exporter, TOAST, 3, FOOD, Items.BREAD);
 
         // Ingredients
-        offerSingleOutputShapelessRecipe(exporter, FLOUR, Items.WHEAT, null);
         offerShapelessRecipe(exporter, GROUND_SALT, GROUND_SALT_BLOCK, null, 9);
         offerCompactingRecipe(exporter, RecipeCategory.MISC, GROUND_SALT_BLOCK, GROUND_SALT);
 

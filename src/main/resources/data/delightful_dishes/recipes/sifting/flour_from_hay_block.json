@@ -1,0 +1,10 @@
+{
+  "type": "delightful_dishes:sifting",
+  "ingredient": {
+    "item": "minecraft:hay_block"
+  },
+  "result": "delightful_dishes:flour",
+  "min": "9",
+  "max": "18",
+  "chance": "1.0"
+}
