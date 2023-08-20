@@ -31,7 +31,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mo_food:calamari",
+          "name": "delightful_dishes:calamari",
           "functions": [
             {
               "function": "minecraft:set_count",

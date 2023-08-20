@@ -46,7 +46,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "mo_food:bacon",
+          "name": "delightful_dishes:bacon",
           "functions": [
             {
               "function": "set_count",

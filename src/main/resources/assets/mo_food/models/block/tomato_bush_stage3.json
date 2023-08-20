@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "mo_food:block/tomato_bush_stage3"
-  }
-}

@@ -30,12 +30,12 @@
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "mo_food:sweet_potato"
+          "name": "delightful_dishes:sweet_potato"
         },
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "mo_food:garlic"
+          "name": "delightful_dishes:garlic"
         },
         {
           "type": "minecraft:item",
@@ -51,7 +51,7 @@
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "mo_food:tomato"
+          "name": "delightful_dishes:tomato"
         },
         {
           "type": "minecraft:item",
@@ -70,7 +70,7 @@
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "mo_food:lettuce"
+          "name": "delightful_dishes:lettuce"
         },
         {
           "type": "minecraft:item",

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mo_food:olives",
+          "name": "delightful_dishes:olives",
           "conditions": [
             {
               "condition": "minecraft:random_chance",

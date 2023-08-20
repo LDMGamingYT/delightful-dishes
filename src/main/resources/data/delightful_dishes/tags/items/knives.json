@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "delightful_dishes:stone_knife",
+        "delightful_dishes:iron_knife",
+        "delightful_dishes:golden_knife",
+        "delightful_dishes:diamond_knife",
+        "delightful_dishes:netherite_knife"
+    ]
+}

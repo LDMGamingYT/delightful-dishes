@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "delightful_dishes:item/corn_0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "bites": 0.1
+      },
+      "model": "delightful_dishes:item/corn_1"
+    },
+    {
+      "predicate": {
+        "bites": 0.2
+      },
+      "model": "delightful_dishes:item/corn_2"
+    },
+    {
+      "predicate": {
+        "bites": 0.3
+      },
+      "model": "delightful_dishes:item/corn_3"
+    }
+  ]
+}

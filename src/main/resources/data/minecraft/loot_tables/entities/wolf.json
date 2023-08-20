@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mo_food:wolf_meat",
+          "name": "delightful_dishes:wolf_meat",
           "functions": [
             {
               "function": "minecraft:set_count",

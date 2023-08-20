@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "delightful_dishes:block/sweet_potatoes_stage3"
+  }
+}

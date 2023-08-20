@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "delightful_dishes:block/lettuce_stage3"
+  }
+}

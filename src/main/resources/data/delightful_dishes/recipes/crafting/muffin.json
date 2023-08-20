@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#S#",
+        "MPE"
+    ],
+    "key": {
+        "#": {
+            "item": "delightful_dishes:flour"
+        },
+        "S": {
+            "item": "minecraft:sugar"
+        },
+        "M": {
+            "item": "minecraft:milk_bucket"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        },
+        "E": {
+            "item": "minecraft:egg"
+        }
+    },
+    "result": {
+        "item": "delightful_dishes:muffin",
+        "count": 6
+    },
+    "group": "muffin"
+}

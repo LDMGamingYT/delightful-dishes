@@ -1,0 +1,10 @@
+{
+  "type": "delightful_dishes:sifting",
+  "ingredient": {
+    "item": "minecraft:coarse_dirt"
+  },
+  "result": "delightful_dishes:ground_salt",
+  "min": "1",
+  "max": "2",
+  "chance": "1.0"
+}

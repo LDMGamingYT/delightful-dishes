@@ -1,31 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "mo_food",
+  "id": "delightful_dishes",
   "version": "${version}",
 
-  "name": "Mo' Food",
-  "description": "",
+  "name": "Delightful Dishes",
+  "description": "A plethora of foods and dishes to enjoy!",
   "authors": [
     "LDM"
   ],
   "contact": {
     "homepage": "",
-    "sources": ""
+    "sources": "https://github.com/LDMGamingYT/delightful-dishes"
   },
 
   "license": "CC BY-ND 4.0",
-  "icon": "assets/mo_food/mod.png",
+  "icon": "assets/delightful_dishes/mod.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.ldm.mo_food.core.init.MoFood"
+      "net.ldm.delightful_dishes.core.init.DelightfulDishes"
     ],
     "client": [
-      "net.ldm.mo_food.core.init.ClientInit"
+      "net.ldm.delightful_dishes.core.init.ClientInit"
     ],
     "fabric-datagen": [
-      "net.ldm.mo_food.core.datagen.DataGen"
+      "net.ldm.delightful_dishes.core.datagen.DataGen"
     ]
   },
 
@@ -37,5 +37,5 @@
   "suggests": {
     "another-mod": "*"
   },
-  "accessWidener" : "mo_food.accesswidener"
+  "accessWidener" : "delightful_dishes.accesswidener"
 }

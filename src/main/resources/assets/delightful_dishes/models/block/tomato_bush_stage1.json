@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "delightful_dishes:block/tomato_bush_stage1"
+  }
+}

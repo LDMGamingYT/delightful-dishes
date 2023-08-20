@@ -1,0 +1,23 @@
+ {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "CTC",
+        "T#T",
+        "CTC"
+    ],
+    "key": {
+        "C": {
+            "item": "delightful_dishes:cheese"
+        },
+        "T": {
+            "item": "delightful_dishes:tomato"
+        },
+        "#": {
+            "item": "delightful_dishes:pizza_dough"
+        }
+    },
+    "result": {
+        "item": "delightful_dishes:raw_cheese_pizza",
+        "count": 1
+    }
+}

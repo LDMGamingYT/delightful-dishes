@@ -1,0 +1,10 @@
+{
+    "type": "delightful_dishes:sifting",
+    "ingredient": {
+        "item": "minecraft:birch_leaves"
+    },
+    "result": "delightful_dishes:olives",
+    "min": "1",
+    "max": "1",
+    "chance": "0.15"
+}
