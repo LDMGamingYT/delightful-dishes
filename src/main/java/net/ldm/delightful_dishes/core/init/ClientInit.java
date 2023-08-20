@@ -22,6 +22,7 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(GARLIC_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CORN_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(SIFTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(COOKTOP, RenderLayer.getCutout());
 
         BlockEntityRendererFactories.register(SIFTER_BLOCK_ENTITY, SifterBlockEntityRenderer::new);
 
