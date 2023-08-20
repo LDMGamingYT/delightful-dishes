@@ -120,7 +120,7 @@ public class DelightfulDishes implements ModInitializer {
     public static final Item SIFTER_BLOCK_ITEM = register(Registries.ITEM, "sifter", new BlockItem(SIFTER, new FabricItemSettings()));
     public static final BlockEntityType<SifterBlockEntity> SIFTER_BLOCK_ENTITY = register(Registries.BLOCK_ENTITY_TYPE, "sifter_block_entity", FabricBlockEntityTypeBuilder.create(SifterBlockEntity::new, SIFTER).build());
 
-    public static final Block COOKTOP = register(Registries.BLOCK, "cooktop", new CooktopBlock(FabricBlockSettings.of(Material.METAL).strength(5f, 6f).sounds(BlockSoundGroup.METAL)), true);
+    public static final Block COOKTOP = register(Registries.BLOCK, "cooktop", new CooktopBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(5f, 6f).sounds(BlockSoundGroup.METAL)), true);
     public static final Item COOKTOP_BLOCK_ITEM = register(Registries.ITEM, "cooktop", new BlockItem(COOKTOP, new FabricItemSettings()));
 
     private static Item registerWithDatagen(String id, Item entry, boolean genLang) {
