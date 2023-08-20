@@ -4,7 +4,7 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "item",
+          "type": "minecraft:item",
           "weight": 1,
           "name": "minecraft:porkchop",
           "functions": [
@@ -44,9 +44,9 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "item",
+          "type": "minecraft:item",
           "weight": 1,
-          "name": "morefood:bacon",
+          "name": "mo_food:bacon",
           "functions": [
             {
               "function": "set_count",

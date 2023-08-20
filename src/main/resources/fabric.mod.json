@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "morefood",
+  "id": "mo_food",
   "version": "${version}",
 
-  "name": "More Food",
-  "description": "This mod adds more foods to Minecraft, now updated to 1.17!",
+  "name": "Mo' Food",
+  "description": "",
   "authors": [
     "LDM"
   ],
@@ -14,28 +14,28 @@
   },
 
   "license": "CC BY-ND 4.0",
-  "icon": "assets/morefood/mod.png",
+  "icon": "assets/mo_food/mod.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.ldm.morefood.MoreFood"
+      "net.ldm.mo_food.core.init.MoFood"
     ],
     "client": [
-      "net.ldm.morefood.ClientInit"
+      "net.ldm.mo_food.core.init.ClientInit"
+    ],
+    "fabric-datagen": [
+      "net.ldm.mo_food.core.datagen.DataGen"
     ]
   },
-  "mixins": [
-    "morefood.mixins.json"
-  ],
 
   "depends": {
-    "fabricloader": ">=0.7.4",
-    "fabric": "*",
-    "minecraft": "1.17.x"
+    "fabricloader": ">=0.14.12",
+    "fabric-api": "*",
+    "minecraft": "1.19.x"
   },
   "suggests": {
     "another-mod": "*"
   },
-  "accessWidener" : "morefood.accesswidener"
+  "accessWidener" : "mo_food.accesswidener"
 }

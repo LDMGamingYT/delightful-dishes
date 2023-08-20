@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "mo_food:block/pepperoni_pizza0"
+    },
+    "bites=1": {
+      "model": "mo_food:block/pepperoni_pizza1"
+    },
+    "bites=2": {
+      "model": "mo_food:block/pepperoni_pizza2"
+    },
+    "bites=3": {
+      "model": "mo_food:block/pepperoni_pizza3"
+    }
+  }
+}

@@ -30,12 +30,12 @@
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "morefood:sweet_potato"
+          "name": "mo_food:sweet_potato"
         },
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "morefood:garlic"
+          "name": "mo_food:garlic"
         },
         {
           "type": "minecraft:item",
@@ -51,7 +51,7 @@
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "morefood:tomato"
+          "name": "mo_food:tomato"
         },
         {
           "type": "minecraft:item",
@@ -70,7 +70,7 @@
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "morefood:lettuce"
+          "name": "mo_food:lettuce"
         },
         {
           "type": "minecraft:item",

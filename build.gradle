@@ -1,26 +1,30 @@
 plugins {
-	id 'fabric-loom' version '0.9-SNAPSHOT'
+	id 'fabric-loom' version '1.0-SNAPSHOT'
 	id 'maven-publish'
 }
 
-loom {
-	accessWidenerPath = file("src/main/resources/morefood.accesswidener")
-}
-
-sourceCompatibility = JavaVersion.VERSION_16
-targetCompatibility = JavaVersion.VERSION_16
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
-dependencies {
-	minecraft "com.mojang:minecraft:1.17.1"
-	mappings "net.fabricmc:yarn:1.17.1+build.61:v2"
-	modImplementation "net.fabricmc:fabric-loader:0.11.7"
+repositories {
+	// Add repositories to retrieve artifacts from in here.
+	// You should only use this when depending on other mods because
+	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
+	// for more information about repositories.
+}
 
-	//Fabric api
-	modImplementation "net.fabricmc.fabric-api:fabric-api:0.40.1+1.17"
+dependencies {
+	minecraft "com.mojang:minecraft:1.19.3"
+	mappings "net.fabricmc:yarn:1.19.3+build.5:v2"
+	modImplementation "net.fabricmc:fabric-loader:0.14.12"
+
+	// Fabric API
+	modImplementation "net.fabricmc.fabric-api:fabric-api:0.72.0+1.19.3"
 }
 
 processResources {
@@ -32,19 +36,8 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	// ensure that the encoding is set to UTF-8, no matter what the system default is
-	// this fixes some edge cases with special characters not displaying correctly
-	// see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
-	// If Javadoc is generated, this must be specified in that task too.
-	it.options.encoding = "UTF-8"
-
-	// The Minecraft launcher currently installs Java 8 for users, so your mod probably wants to target Java 8 too
-	// JDK 9 introduced a new way of specifying this that will make sure no newer classes or methods are used.
-	// We'll use that if it's available, but otherwise we'll use the older option.
-	def targetVersion = 8
-	if (JavaVersion.current().isJava9Compatible()) {
-		 it.options.release = targetVersion
-	}
+	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.
+	it.options.release = 17
 }
 
 java {
@@ -64,19 +57,41 @@ jar {
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
-			// add all the jars that should be included when publishing to maven
-			artifact(remapJar) {
-				builtBy remapJar
-			}
-			artifact(sourcesJar) {
-				builtBy remapSourcesJar
-			}
+			from components.java
 		}
 	}
 
-	// Select the repositories you want to publish to
-	// To publish to maven local, no extra repositories are necessary. Just use the task `publishToMavenLocal`.
+	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
-		// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+		// Add repositories to publish to here.
+		// Notice: This block does NOT have the same function as the block in the top level.
+		// The repositories here will be used for publishing your artifact, not for
+		// retrieving dependencies.
+	}
+}
+
+loom {
+	runs {
+		// This adds a new gradle task that runs the datagen API: "gradlew runDatagenClient"
+		datagenClient {
+			inherit client
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=${mod_id}"
+
+			runDir "build/datagen"
+		}
+	}
+}
+
+// Adds the generated files into the jar you distribute to players.
+sourceSets {
+	main {
+		resources {
+			srcDirs += [
+					'src/main/generated'
+			]
+		}
 	}
 }

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "mo_food:block/sweet_potatoes_stage0"
+    },
+    "age=1": {
+      "model": "mo_food:block/sweet_potatoes_stage0"
+    },
+    "age=2": {
+      "model": "mo_food:block/sweet_potatoes_stage1"
+    },
+    "age=3": {
+      "model": "mo_food:block/sweet_potatoes_stage1"
+    },
+    "age=4": {
+      "model": "mo_food:block/sweet_potatoes_stage2"
+    },
+    "age=5": {
+      "model": "mo_food:block/sweet_potatoes_stage2"
+    },
+    "age=6": {
+      "model": "mo_food:block/sweet_potatoes_stage2"
+    },
+    "age=7": {
+      "model": "mo_food:block/sweet_potatoes_stage3"
+    }
+  }
+}

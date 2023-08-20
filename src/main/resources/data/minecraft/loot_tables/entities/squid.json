@@ -31,7 +31,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "morefood:calamari",
+          "name": "mo_food:calamari",
           "functions": [
             {
               "function": "minecraft:set_count",

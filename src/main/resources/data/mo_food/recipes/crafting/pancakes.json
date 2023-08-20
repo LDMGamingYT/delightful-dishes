@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#M#",
+        "SES",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "mo_food:flour"
+        },
+        "M": {
+            "item": "minecraft:milk_bucket"
+        },
+        "S": {
+            "item": "minecraft:sugar"
+        },
+        "E": {
+            "item": "minecraft:egg"
+        }
+    },
+    "result": {
+        "item": "mo_food:pancakes",
+        "count": 1
+    },
+    "group": "pancakes"
+}

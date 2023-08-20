@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "mo_food:stone_knife",
+        "mo_food:iron_knife",
+        "mo_food:golden_knife",
+        "mo_food:diamond_knife",
+        "mo_food:netherite_knife"
+    ]
+}

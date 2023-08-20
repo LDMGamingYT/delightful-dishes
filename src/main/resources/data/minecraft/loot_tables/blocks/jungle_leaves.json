@@ -6,11 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "morefood:lemon",
+          "name": "mo_food:lemon",
           "conditions": [
             {
               "condition": "minecraft:random_chance",
-              "chance": 0.15
+              "chance": 0.01
             }
           ]
         }
