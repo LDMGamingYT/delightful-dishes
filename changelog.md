@@ -4,8 +4,6 @@
 
 ##### This version has re-branded the mod from "More Food" to "Delightful Dishes". Alpha versions will not work with this and future versions.
 
-
-
 * Added: Sifter
 * Added: You can now sift leaves to get their items (fruits, sticks, saplings)
 * Removed: Salt ore
