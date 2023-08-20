@@ -124,6 +124,8 @@ public class DelightfulDishes implements ModInitializer {
     public static final Block COOKTOP = register(Registries.BLOCK, "cooktop", new CooktopBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(5f, 6f).sounds(BlockSoundGroup.METAL).luminance(state -> state.get(Properties.LIT) ? 15 : 0)), true);
     public static final Item COOKTOP_BLOCK_ITEM = register(Registries.ITEM, "cooktop", new BlockItem(COOKTOP, new FabricItemSettings()));
 
+    public static final Item FRYING_PAN = register(Registries.ITEM, "frying_pan", new Item(new FabricItemSettings()), true);
+
     private static Item registerWithDatagen(String id, Item entry, boolean genLang) {
         Item registryInstance = register(Registries.ITEM, id, entry, genLang);
         ITEM_MODEL_DATAGEN.add(registryInstance);
@@ -210,7 +212,9 @@ public class DelightfulDishes implements ModInitializer {
             entries.add(GOLDEN_KNIFE);
             entries.add(DIAMOND_KNIFE);
             entries.add(NETHERITE_KNIFE);
+            entries.add(FRYING_PAN);
         });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.add(FRYING_PAN));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(GROUND_SALT_BLOCK_ITEM));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.add(SIFTER_BLOCK_ITEM);
