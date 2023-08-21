@@ -7,4 +7,5 @@ import net.minecraft.util.Identifier;
 
 public class DelightfulDishesTags {
     public static final TagKey<Item> KNIVES = TagKey.of(RegistryKeys.ITEM, new Identifier(DelightfulDishes.MOD_ID, "knives"));
+    public static final TagKey<Item> FIRE_STARTERS = TagKey.of(RegistryKeys.ITEM, new Identifier(DelightfulDishes.MOD_ID, "fire_starters"));
 }

@@ -1,9 +1,12 @@
 package net.ldm.delightful_dishes.block;
 
+import net.ldm.delightful_dishes.core.init.DelightfulDishes;
+import net.ldm.delightful_dishes.core.init.DelightfulDishesTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -40,9 +43,17 @@ public class CooktopBlock extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (state.get(LIT)) return ActionResult.SUCCESS;
-        player.playSound(SoundEvents.ITEM_FIRECHARGE_USE, 1, 1);
-        world.setBlockState(pos, state.with(LIT, true));
+        ItemStack stack = player.getStackInHand(hand);
+
+        if (stack.getRegistryEntry().isIn(DelightfulDishesTags.FIRE_STARTERS) && !state.get(LIT)) {
+            player.playSound(SoundEvents.ITEM_FIRECHARGE_USE, 1, 1);
+            world.setBlockState(pos, state.with(LIT, true));
+            // TODO: 2023-08-20 Damage/decrement item stack
+        } else if (stack.isOf(DelightfulDishes.FRYING_PAN) && state.get(PANS) < 4) {
+            player.playSound(SoundEvents.BLOCK_ANVIL_PLACE, 1, 1);
+            world.setBlockState(pos, state.with(PANS, state.get(PANS) + 1));
+            stack.decrement(1);
+        }
         return ActionResult.SUCCESS;
     }
 
