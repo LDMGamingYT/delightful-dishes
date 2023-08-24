@@ -1,34 +1,164 @@
 {
   "variants": {
-    "pans=0,lit=false": {
-      "model": "delightful_dishes:block/cooktop/cooktop_0"
+    "pans=0,lit=false,facing=north": {
+      "model": "delightful_dishes:block/cooktop/cooktop_0",
+      "y": 0
     },
-    "pans=1,lit=false": {
-      "model": "delightful_dishes:block/cooktop/cooktop_1"
+    "pans=0,lit=false,facing=east": {
+      "model": "delightful_dishes:block/cooktop/cooktop_0",
+      "y": 90
     },
-    "pans=2,lit=false": {
-      "model": "delightful_dishes:block/cooktop/cooktop_2"
+    "pans=0,lit=false,facing=south": {
+      "model": "delightful_dishes:block/cooktop/cooktop_0",
+      "y": 180
     },
-    "pans=3,lit=false": {
-      "model": "delightful_dishes:block/cooktop/cooktop_3"
+    "pans=0,lit=false,facing=west": {
+      "model": "delightful_dishes:block/cooktop/cooktop_0",
+      "y": 270
     },
-    "pans=4,lit=false": {
-      "model": "delightful_dishes:block/cooktop/cooktop_4"
+    "pans=1,lit=false,facing=north": {
+      "model": "delightful_dishes:block/cooktop/cooktop_1",
+      "y": 0
     },
-    "pans=0,lit=true": {
-      "model": "delightful_dishes:block/cooktop/cooktop_0_on"
+    "pans=1,lit=false,facing=east": {
+      "model": "delightful_dishes:block/cooktop/cooktop_1",
+      "y": 90
     },
-    "pans=1,lit=true": {
-      "model": "delightful_dishes:block/cooktop/cooktop_1_on"
+    "pans=1,lit=false,facing=south": {
+      "model": "delightful_dishes:block/cooktop/cooktop_1",
+      "y": 180
     },
-    "pans=2,lit=true": {
-      "model": "delightful_dishes:block/cooktop/cooktop_2_on"
+    "pans=1,lit=false,facing=west": {
+      "model": "delightful_dishes:block/cooktop/cooktop_1",
+      "y": 270
     },
-    "pans=3,lit=true": {
-      "model": "delightful_dishes:block/cooktop/cooktop_3_on"
+    "pans=2,lit=false,facing=north": {
+      "model": "delightful_dishes:block/cooktop/cooktop_2",
+      "y": 0
     },
-    "pans=4,lit=true": {
-      "model": "delightful_dishes:block/cooktop/cooktop_4_on"
+    "pans=2,lit=false,facing=east": {
+      "model": "delightful_dishes:block/cooktop/cooktop_2",
+      "y": 90
+    },
+    "pans=2,lit=false,facing=south": {
+      "model": "delightful_dishes:block/cooktop/cooktop_2",
+      "y": 180
+    },
+    "pans=2,lit=false,facing=west": {
+      "model": "delightful_dishes:block/cooktop/cooktop_2",
+      "y": 270
+    },
+    "pans=3,lit=false,facing=north": {
+      "model": "delightful_dishes:block/cooktop/cooktop_3",
+      "y": 0
+    },
+    "pans=3,lit=false,facing=east": {
+      "model": "delightful_dishes:block/cooktop/cooktop_3",
+      "y": 90
+    },
+    "pans=3,lit=false,facing=south": {
+      "model": "delightful_dishes:block/cooktop/cooktop_3",
+      "y": 180
+    },
+    "pans=3,lit=false,facing=west": {
+      "model": "delightful_dishes:block/cooktop/cooktop_3",
+      "y": 270
+    },
+    "pans=4,lit=false,facing=north": {
+      "model": "delightful_dishes:block/cooktop/cooktop_4",
+      "y": 0
+    },
+    "pans=4,lit=false,facing=east": {
+      "model": "delightful_dishes:block/cooktop/cooktop_4",
+      "y": 90
+    },
+    "pans=4,lit=false,facing=south": {
+      "model": "delightful_dishes:block/cooktop/cooktop_4",
+      "y": 180
+    },
+    "pans=4,lit=false,facing=west": {
+      "model": "delightful_dishes:block/cooktop/cooktop_4",
+      "y": 270
+    },
+    "pans=0,lit=true,facing=north": {
+      "model": "delightful_dishes:block/cooktop/cooktop_0_on",
+      "y": 0
+    },
+    "pans=0,lit=true,facing=east": {
+      "model": "delightful_dishes:block/cooktop/cooktop_0_on",
+      "y": 90
+    },
+    "pans=0,lit=true,facing=south": {
+      "model": "delightful_dishes:block/cooktop/cooktop_0_on",
+      "y": 180
+    },
+    "pans=0,lit=true,facing=west": {
+      "model": "delightful_dishes:block/cooktop/cooktop_0_on",
+      "y": 270
+    },
+    "pans=1,lit=true,facing=north": {
+      "model": "delightful_dishes:block/cooktop/cooktop_1_on",
+      "y": 0
+    },
+    "pans=1,lit=true,facing=east": {
+      "model": "delightful_dishes:block/cooktop/cooktop_1_on",
+      "y": 90
+    },
+    "pans=1,lit=true,facing=south": {
+      "model": "delightful_dishes:block/cooktop/cooktop_1_on",
+      "y": 180
+    },
+    "pans=1,lit=true,facing=west": {
+      "model": "delightful_dishes:block/cooktop/cooktop_1_on",
+      "y": 270
+    },
+    "pans=2,lit=true,facing=north": {
+      "model": "delightful_dishes:block/cooktop/cooktop_2_on",
+      "y": 0
+    },
+    "pans=2,lit=true,facing=east": {
+      "model": "delightful_dishes:block/cooktop/cooktop_2_on",
+      "y": 90
+    },
+    "pans=2,lit=true,facing=south": {
+      "model": "delightful_dishes:block/cooktop/cooktop_2_on",
+      "y": 180
+    },
+    "pans=2,lit=true,facing=west": {
+      "model": "delightful_dishes:block/cooktop/cooktop_2_on",
+      "y": 270
+    },
+    "pans=3,lit=true,facing=north": {
+      "model": "delightful_dishes:block/cooktop/cooktop_3_on",
+      "y": 0
+    },
+    "pans=3,lit=true,facing=east": {
+      "model": "delightful_dishes:block/cooktop/cooktop_3_on",
+      "y": 90
+    },
+    "pans=3,lit=true,facing=south": {
+      "model": "delightful_dishes:block/cooktop/cooktop_3_on",
+      "y": 180
+    },
+    "pans=3,lit=true,facing=west": {
+      "model": "delightful_dishes:block/cooktop/cooktop_3_on",
+      "y": 270
+    },
+    "pans=4,lit=true,facing=north": {
+      "model": "delightful_dishes:block/cooktop/cooktop_4_on",
+      "y": 0
+    },
+    "pans=4,lit=true,facing=east": {
+      "model": "delightful_dishes:block/cooktop/cooktop_4_on",
+      "y": 90
+    },
+    "pans=4,lit=true,facing=south": {
+      "model": "delightful_dishes:block/cooktop/cooktop_4_on",
+      "y": 180
+    },
+    "pans=4,lit=true,facing=west": {
+      "model": "delightful_dishes:block/cooktop/cooktop_4_on",
+      "y": 270
     }
   }
 }
